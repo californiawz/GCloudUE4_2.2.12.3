@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2012 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.gcore.tmgp.gcloudcore">
+    <uses-sdk android:minSdkVersion="9"/>
+    <!-- TODO 接入必须权限模块 START -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- TODO 接入必须权限模块 END -->
+
+    <application android:networkSecurityConfig="@xml/network_security_config">
+        <meta-data android:name="GCloud.GCloud.GameId" android:value="\745065090" />
+        <meta-data android:name="GCloud.GCloud.GameKey" android:value="bc66f98c11c67ffda74e9cbb4dee5459" />
+        <meta-data android:name="GCloud.GCloudCore.RemoteConfigUrl" android:value="https://cloudctrl.gcloud.qq.com" />
+        <meta-data android:name="GCloud.GCloudCore.GTraceUrl" android:value="@string/gcloud_trace_url" />
+        <meta-data android:name="GCloud.TDM.Test" android:value="false" />
+    </application>
+</manifest>

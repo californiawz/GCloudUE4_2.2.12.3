@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gcloud.plugin.PluginCrosCurl"
+    android:versionCode="1023"
+    android:versionName="1.0.000.1023" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="30" />
+    <!-- 网络通信 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 获取网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+</manifest>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="msdk_policy_confirm_button_color_end">#65BBFF</color>
+    <color name="msdk_policy_confirm_button_color_start">#0581F6</color>
+    <color name="msdk_policy_confirm_button_pressed_color_end">#58A4E0</color>
+    <color name="msdk_policy_confirm_button_pressed_color_start">#0471D8</color>
+    <color name="msdk_policy_confirm_button_text_color">#FFFFFF</color>
+    <color name="msdk_policy_content_text_color">#FF000000</color>
+    <color name="msdk_policy_layout_inner_bg_color">#FFFFFF</color>
+    <color name="msdk_policy_layout_inner_bg_outline_color">#1A369EF9</color>
+    <color name="msdk_policy_other_button_color">#E1E2E9</color>
+    <color name="msdk_policy_other_button_pressed_color">#C5C6CC</color>
+    <color name="msdk_policy_other_button_text_color">#000000</color>
+    <color name="msdk_policy_title_text_color">#FF000000</color>
+    <dimen name="msdk_permission_layout_button_margin">28dp</dimen>
+    <dimen name="msdk_permission_layout_second_button_group_height">200dp</dimen>
+    <dimen name="msdk_permission_layout_second_content_height">174.64dp</dimen>
+    <dimen name="msdk_permission_layout_second_title_text_size">17.33sp</dimen>
+    <dimen name="msdk_permission_layout_title_text_size">17.33sp</dimen>
+    <dimen name="msdk_permisson_layout_button_group_height">148dp</dimen>
+    <dimen name="msdk_policy_button_corner_radius">21.3dp</dimen>
+    <dimen name="msdk_policy_button_text_size">16sp</dimen>
+    <dimen name="msdk_policy_content_height">207.33dp</dimen>
+    <dimen name="msdk_policy_content_text_size">12sp</dimen>
+    <dimen name="msdk_policy_content_width">232dp</dimen>
+    <dimen name="msdk_policy_dialog_button_height">43dp</dimen>
+    <dimen name="msdk_policy_dialog_button_land_height">30dp</dimen>
+    <dimen name="msdk_policy_dialog_button_land_margin">8dp</dimen>
+    <dimen name="msdk_policy_dialog_button_land_width">105dp</dimen>
+    <dimen name="msdk_policy_dialog_button_margin">12dp</dimen>
+    <dimen name="msdk_policy_dialog_button_width">160dp</dimen>
+    <dimen name="msdk_policy_dialog_content_height">300dp</dimen>
+    <dimen name="msdk_policy_dialog_content_land_height">190dp</dimen>
+    <dimen name="msdk_policy_dialog_content_land_margin">7dp</dimen>
+    <dimen name="msdk_policy_dialog_content_land_padding">20dp</dimen>
+    <dimen name="msdk_policy_dialog_content_margin">10dp</dimen>
+    <dimen name="msdk_policy_dialog_content_padding">30dp</dimen>
+    <dimen name="msdk_policy_dialog_title_land_margin">20dp</dimen>
+    <dimen name="msdk_policy_dialog_title_land_textsize">12sp</dimen>
+    <dimen name="msdk_policy_dialog_title_margin">30dp</dimen>
+    <dimen name="msdk_policy_dialog_title_textsize">16sp</dimen>
+    <dimen name="msdk_policy_dialog_window_grey_bg_height">457.67dp</dimen>
+    <dimen name="msdk_policy_dialog_window_grey_bg_width">286dp</dimen>
+    <dimen name="msdk_policy_dialog_window_height">451.67dp</dimen>
+    <dimen name="msdk_policy_dialog_window_width">280dp</dimen>
+    <dimen name="msdk_policy_large_button_height">42.67dp</dimen>
+    <dimen name="msdk_policy_large_button_width">160dp</dimen>
+    <dimen name="msdk_policy_layout_button_group_height">148dp</dimen>
+    <dimen name="msdk_policy_layout_title_text_size">17.33sp</dimen>
+    <dimen name="msdk_policy_popup_window_grey_bg_height">457.67dp</dimen>
+    <dimen name="msdk_policy_popup_window_grey_bg_width">286dp</dimen>
+    <dimen name="msdk_policy_popup_window_height">451.67dp</dimen>
+    <dimen name="msdk_policy_popup_window_height_second">451.67dp</dimen>
+    <dimen name="msdk_policy_popup_window_width">280dp</dimen>
+    <dimen name="msdk_policy_popup_window_width_second">280dp</dimen>
+    <dimen name="msdk_policy_positive_space_width_12dp">12dp</dimen>
+    <dimen name="msdk_policy_positive_space_width_16dp">16dp</dimen>
+    <dimen name="msdk_policy_positive_space_width_24dp">24dp</dimen>
+    <dimen name="msdk_policy_positive_space_width_30dp">30dp</dimen>
+    <dimen name="msdk_policy_small_button_height">42.67dp</dimen>
+    <dimen name="msdk_policy_small_button_margin">35dp</dimen>
+    <dimen name="msdk_policy_small_button_width">122.67dp</dimen>
+    <dimen name="msdk_popup_dialog_common_bt_margin">10dp</dimen>
+    <dimen name="msdk_popup_dialog_common_bt_size">30dp</dimen>
+    <dimen name="msdk_popup_richtext_dialog_button_height">43dp</dimen>
+    <dimen name="msdk_popup_richtext_dialog_button_width">120dp</dimen>
+    <dimen name="msdk_popup_richtext_dialog_layout_height">310dp</dimen>
+    <dimen name="msdk_popup_richtext_dialog_layout_width">300dp</dimen>
+    <dimen name="msdk_popup_richtext_dialog_richtext_height">207dp</dimen>
+    <dimen name="msdk_popup_richtext_dialog_richtext_padding">30dp</dimen>
+    <dimen name="msdk_popup_webview_dialog_refresh_bt_size">50dp</dimen>
+    <string name="msdk_permission_layout_confirm_button_text">确定</string>
+    <string name="msdk_permission_layout_second_confirm_button_text">重新授权</string>
+    <string name="msdk_permission_layout_second_quit_button_text">退出</string>
+    <string name="msdk_permission_layout_second_request_permission_msg">您还可以到设置中进行授权，授权【产品】运行必要权限，即可进入游戏哦</string>
+    <string name="msdk_permission_layout_second_setting_button_text">设置</string>
+    <string name="msdk_permission_layout_second_title">权限说明</string>
+    <string name="msdk_permission_layout_title">权限说明</string>
+    <string name="msdk_policy_layout_confirm_button_text">同意</string>
+    <string name="msdk_policy_layout_reject_button_text">不同意</string>
+    <string name="msdk_policy_layout_title">腾讯游戏用户协议和隐私政策</string>
+    <string name="msdkpopup_dialog_common_agree">同意</string>
+    <string name="msdkpopup_dialog_common_cancel">取消</string>
+    <string name="msdkpopup_dialog_common_confirm">确定</string>
+    <string name="msdkpopup_dialog_common_reject">不同意</string>
+    <style name="MSDK.Policy.Confirm.Button.Large" parent="MSDK.Policy.Confirm.Button.Large.Size">
+        <item name="android:background">@drawable/msdk_policy_confirm_button_selector</item>
+        <item name="android:textColor">@color/msdk_policy_confirm_button_text_color</item>
+    </style>
+    <style name="MSDK.Policy.Confirm.Button.Large.Size" parent="">
+        <item name="android:layout_height">@dimen/msdk_policy_large_button_height</item>
+        <item name="android:layout_width">@dimen/msdk_policy_large_button_width</item>
+        <item name="android:textSize">@dimen/msdk_policy_button_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="MSDK.Policy.Confirm.Button.Small" parent="MSDK.Policy.Confirm.Button.Small.Size">
+        <item name="android:background">@drawable/msdk_policy_confirm_button_selector</item>
+        <item name="android:textColor">@color/msdk_policy_confirm_button_text_color</item>
+    </style>
+    <style name="MSDK.Policy.Confirm.Button.Small.Size" parent="">
+        <item name="android:layout_height">@dimen/msdk_policy_small_button_height</item>
+        <item name="android:layout_width">@dimen/msdk_policy_small_button_width</item>
+        <item name="android:textSize">@dimen/msdk_policy_button_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="MSDK.Policy.Content.Window" parent="">
+        <item name="android:layout_width">@dimen/msdk_policy_content_width</item>
+        <item name="android:layout_height">@dimen/msdk_policy_content_height</item>
+        <item name="android:textSize">@dimen/msdk_policy_content_text_size</item>
+        <item name="android:layout_marginLeft">@dimen/msdk_policy_positive_space_width_24dp</item>
+        <item name="android:layout_marginStart">@dimen/msdk_policy_positive_space_width_24dp</item>
+        <item name="android:layout_marginRight">@dimen/msdk_policy_positive_space_width_24dp</item>
+        <item name="android:layout_marginEnd">@dimen/msdk_policy_positive_space_width_24dp</item>
+    </style>
+    <style name="MSDK.Policy.Other.Button.Large" parent="MSDK.Policy.Confirm.Button.Large.Size">
+        <item name="android:background">@drawable/msdk_policy_other_button_selector</item>
+        <item name="android:textColor">@color/msdk_policy_other_button_text_color</item>
+    </style>
+    <style name="MSDK.Policy.Other.Button.Small" parent="MSDK.Policy.Confirm.Button.Small.Size">
+        <item name="android:background">@drawable/msdk_policy_other_button_selector</item>
+        <item name="android:textColor">@color/msdk_policy_other_button_text_color</item>
+    </style>
+    <style name="MSDK.Policy.Popup" parent="">
+        <item name="android:layout_width">@dimen/msdk_policy_popup_window_width</item>
+        <item name="android:layout_height">@dimen/msdk_policy_popup_window_height</item>
+    </style>
+    <style name="MSDK.Policy.Popup.Permission.Second" parent="">
+        <item name="android:layout_width">@dimen/msdk_policy_popup_window_width_second</item>
+        <item name="android:layout_height">@dimen/msdk_policy_popup_window_height_second</item>
+    </style>
+    <style name="MSDK.Policy.Title" parent="">
+        <item name="android:layout_marginTop">@dimen/msdk_policy_positive_space_width_30dp</item>
+        <item name="android:textSize">@dimen/msdk_policy_layout_title_text_size</item>
+        <item name="android:textColor">@color/msdk_policy_title_text_color</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="MSDK.Policy.Window.Inner" parent="">
+        <item name="android:background">@drawable/msdk_policy_layout_inner_window_bg</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+    <style name="MSDKPolicyTheme" parent="android:Theme.Holo.Light">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <style name="MSDKPopupDefaultDialog" parent="@android:style/Theme.Holo.Dialog">
+        <!-- 是否有边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!--是否在悬浮Activity之上  -->
+        <item name="android:windowIsFloating">false</item>
+        <!--标题  -->
+        <item name="android:windowNoTitle">true</item>
+
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <style mce_bogus="1" name="MSDKPopupDialogWindowAnim" parent="android:Animation.Dialog">
+<!--        <item name="android:windowEnterAnimation">@anim/dialog_enter_anim</item>-->
+<!--        <item name="android:windowExitAnimation">@anim/dialog_exit_anim</item>-->
+<!--        <item name="android:windowShowAnimation">@anim/dialog_enter_anim</item>-->
+<!--        <item name="android:windowHideAnimation">@anim/dialog_exit_anim</item>-->
+    </style>
+    <style name="msdk_dialog_button_default">
+        <item name="android:background">@drawable/msdkpopup_dialog_button_bg</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="msdk_dialog_button_land">
+        <item name="android:background">@drawable/msdkpopup_dialog_button_bg</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+    <style name="msdk_dialog_button_land_other">
+        <item name="android:background">@drawable/msdkpopup_dialog_other_button_bg</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+    <style name="msdk_dialog_button_other">
+        <item name="android:background">@drawable/msdkpopup_dialog_other_button_bg</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+</resources>

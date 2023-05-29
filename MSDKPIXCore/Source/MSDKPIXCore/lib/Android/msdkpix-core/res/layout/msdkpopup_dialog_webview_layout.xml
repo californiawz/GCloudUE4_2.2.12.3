@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:id="@+id/msdkpopup_webview_dialog_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/msdkpopup_webview_dialog_close"
+        android:layout_width="@dimen/msdk_popup_dialog_common_bt_size"
+        android:layout_height="@dimen/msdk_popup_dialog_common_bt_size"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/msdk_popup_dialog_common_bt_margin"
+        android:src="@drawable/msdk_popup_close" />
+
+    <ImageView
+        android:id="@+id/msdkpopup_webview_dialog_back"
+        android:layout_width="@dimen/msdk_popup_dialog_common_bt_size"
+        android:layout_height="@dimen/msdk_popup_dialog_common_bt_size"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/msdk_popup_dialog_common_bt_margin"
+        android:src="@drawable/msdk_popup_back" />
+
+    <ImageView
+        android:id="@+id/msdkpopup_webview_dialog_refresh"
+        android:layout_width="@dimen/msdk_popup_webview_dialog_refresh_bt_size"
+        android:layout_height="@dimen/msdk_popup_webview_dialog_refresh_bt_size"
+        android:layout_centerInParent="true"
+        android:src="@drawable/msdk_popup_refresh" />
+
+</RelativeLayout>

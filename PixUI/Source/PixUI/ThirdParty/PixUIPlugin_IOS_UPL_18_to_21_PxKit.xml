@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <init>
+        <log text="PixUIPlugin Copy Framework to BuildDir"/>
+        <copyDir src="$S(PluginDir)/Binaries/IOS/Frameworks" dst="$S(BuildDir)"/>
+      
+        <log text="PixUIPlugin Copy PixUI dynamic Framework PxKit"/>
+        <copyDir src="$S(EngineDir)/Intermediate/UnzippedFrameworks/PixUI/ThirdParty/Libraries/IOS/PxKit.embeddedframework/PxKit.framework" dst="$S(BuildDir)/Frameworks/PxKit.framework"/>
+    </init>
+
+    <iosPListUpdates>
+        <!-- ............................For debug test permission............................. -->
+        <!--
+        <addElements tag="dict" once="true">
+            <key>UIFileSharingEnabled</key><true/>
+        </addElements>
+        -->
+    </iosPListUpdates>
+
+</root>

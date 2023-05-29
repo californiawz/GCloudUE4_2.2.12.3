@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/playout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titlebar_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/titlebar">
+
+        <ImageButton
+            android:id="@+id/openByBrowser"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/btn_margin_half"
+            android:background="@drawable/msdk_webview_sel_btn_bg"
+            android:paddingLeft="@dimen/btn_margin_half"
+            android:paddingRight="@dimen/btn_margin_half"
+            android:src="@drawable/msdk_webview_btn_qqbrowser"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/webTitle"
+            android:layout_width="@dimen/titlebar_text_width"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/titlebar_text"
+            android:textSize="@dimen/titlebar_text_size" />
+
+        <ImageButton
+            android:id="@+id/more"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/btn_margin_half"
+            android:background="@drawable/msdk_webview_sel_btn_bg"
+            android:paddingLeft="@dimen/btn_margin_half"
+            android:paddingRight="@dimen/btn_margin_half"
+            android:src="@drawable/msdk_webview_btn_more" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/webview_framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/toolbar"
+        android:layout_below="@+id/titlebar"
+        android:background="@color/white">
+
+        <com.tencent.smtt.sdk.WebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="left|top" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titlebar_height"
+        android:layout_alignParentBottom="true"
+        android:background="@color/toolbar_visible">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/msdk_webview_sel_btn_bg"
+                android:paddingLeft="@dimen/btn_margin"
+                android:paddingRight="@dimen/btn_margin"
+                android:src="@drawable/msdk_webview_btn_left"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/backUnclickable"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/msdk_webview_sel_btn_bg"
+                android:clickable="false"
+                android:paddingLeft="@dimen/btn_margin"
+                android:paddingRight="@dimen/btn_margin"
+                android:src="@drawable/msdk_webview_btn_left_disabled" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/forward"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/msdk_webview_sel_btn_bg"
+                android:paddingLeft="@dimen/btn_margin"
+                android:paddingRight="@dimen/btn_margin"
+                android:src="@drawable/msdk_webview_btn_right"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/forwardUnclickable"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/msdk_webview_sel_btn_bg"
+                android:clickable="false"
+                android:paddingLeft="@dimen/btn_margin"
+                android:paddingRight="@dimen/btn_margin"
+                android:src="@drawable/msdk_webview_btn_right_disabled" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/stop"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/msdk_webview_sel_btn_bg"
+                android:paddingLeft="@dimen/btn_margin"
+                android:paddingRight="@dimen/btn_margin"
+                android:src="@drawable/msdk_webview_btn_stop" />
+
+            <ImageButton
+                android:id="@+id/refresh"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/msdk_webview_sel_btn_bg"
+                android:paddingLeft="@dimen/btn_margin"
+                android:paddingRight="@dimen/btn_margin"
+                android:src="@drawable/msdk_webview_btn_refresh"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/land_layout_more"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageButton
+                android:id="@+id/landMore"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/msdk_webview_sel_btn_bg"
+                android:paddingLeft="@dimen/btn_margin"
+                android:paddingRight="@dimen/btn_margin"
+                android:src="@drawable/msdk_webview_btn_more" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/return_app"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/msdk_webview_sel_btn_bg"
+                android:layout_marginLeft="@dimen/btn_margin"
+                android:layout_marginRight="@dimen/btn_margin"
+                android:src="@drawable/msdk_webview_btn_close" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,124 @@
+请在游戏工程的Source/XXXX/XXXX.Build.cs中添加代码，将相应插件引入工程 : 
+
+PrivateDependencyModuleNames.AddRange(new string[] { "GCloud" });
+PrivateDependencyModuleNames.AddRange(new string[] { "GCloudCore" });
+PrivateDependencyModuleNames.AddRange(new string[] { "GVoice" });
+PrivateDependencyModuleNames.AddRange(new string[] { "MSDKPIXBeacon" });
+PrivateDependencyModuleNames.AddRange(new string[] { "MSDKPIXBugly" });
+PrivateDependencyModuleNames.AddRange(new string[] { "MSDKPIXCore" });
+PrivateDependencyModuleNames.AddRange(new string[] { "MSDKPIXLBS" });
+PrivateDependencyModuleNames.AddRange(new string[] { "MSDKPIXQQ" });
+PrivateDependencyModuleNames.AddRange(new string[] { "MSDKPIXSystem" });
+PrivateDependencyModuleNames.AddRange(new string[] { "MSDKPIXTDM" });
+PrivateDependencyModuleNames.AddRange(new string[] { "MSDKPIXWeChat" });
+PrivateDependencyModuleNames.AddRange(new string[] { "MSDKPIXWebView" });
+PrivateDependencyModuleNames.AddRange(new string[] { "MSDKPIXXG" });
+PrivateDependencyModuleNames.AddRange(new string[] { "PixUI" });
+PrivateDependencyModuleNames.AddRange(new string[] { "PluginCrosCurl" });
+PrivateDependencyModuleNames.AddRange(new string[] { "TDM" });
+PrivateDependencyModuleNames.AddRange(new string[] { "UnionAdapter" });
+
+
+
+请在UE4工程->设置->项目设置->平台->iOS, 在Additional Plist Data中添加以下文本作为info.plist信息(如果直接在Config/DefaultEngine.ini文件中配置，请去掉以下文本中的换行符) : 
+
+<key>GCloudCore</key>
+<dict>
+  <key>RemoteConfigUrl</key>
+  <string>https://cloudctrl.gcloud.qq.com</string>
+  <key>GTraceUrl</key>
+  <string>https://cloudctrl.gcloud.qq.com/gtrace/get_traceid_list</string>
+</dict>
+<key>NSCameraUsageDescription</key>
+<string>MSDK 需要使用您的相机以拍摄相片</string>
+<key>TDM</key>
+<dict>
+  <key>LogLevel</key>
+  <string>1</string>
+  <key>Test</key>
+  <false/>
+  <key>AppId</key>
+  <string>745065090</string>
+  <key>AppChannel</key>
+  <string>AppStore</string>
+  <key>TGEMIT_ROUTER_ADDRESS_FORMAL</key>
+  <string>https://sg.tdatamaster.com:8013/tdm/v1/route</string>
+</dict>
+<key>NSLocationWhenInUseUsageDescription</key>
+<string>CurrentNeedLocation</string>
+<key>GCloud</key>
+<dict>
+  <key>GameId</key>
+  <string>745065090</string>
+  <key>GameKey</key>
+  <string>bc66f98c11c67ffda74e9cbb4dee5459</string>
+</dict>
+<key>NSMicrophoneUsageDescription</key>
+<string>Apply Microphone Permission</string>
+<key>LSApplicationQueriesSchemes</key>
+<array>
+  <string>weixin</string>
+  <string>wechat</string>
+  <string>weixinULAPI</string>
+  <string>weixinURLParamsAPI</string>
+  <string>tim</string>
+  <string>mqq</string>
+  <string>mqqapi</string>
+  <string>mqqwpa</string>
+  <string>mqqbrowser</string>
+  <string>mttbrowser</string>
+  <string>mqqOpensdkSSoLogin</string>
+  <string>mqqopensdkapiV2</string>
+  <string>mqqopensdkapiV4</string>
+  <string>mqqopensdkminiapp</string>
+  <string>wtloginmqq2</string>
+  <string>mqzone</string>
+  <string>mqzoneopensdk</string>
+  <string>mqzoneopensdkapi</string>
+  <string>mqzoneopensdkapi19</string>
+  <string>mqzoneopensdkapiV2</string>
+  <string>mqqapiwallet</string>
+  <string>mqqopensdkfriend</string>
+  <string>mqqopensdkavatar</string>
+  <string>mqqopensdkdataline</string>
+  <string>mqqgamebindinggroup</string>
+  <string>mqqopensdkgrouptribeshare</string>
+  <string>tencentapi.qq.reqContent</string>
+  <string>tencentapi.qzone.reqContent</string>
+  <string>mqqthirdappgroup</string>
+  <string>mqqopensdklaunchminiapp</string>
+  <string>mqqopensdkproxylogin</string>
+  <string>mqqopensdknopasteboard</string>
+  <string>mqqopensdknopasteboardios16</string>
+  <string>mqqopensdkcheckauth</string>
+  <string>mqqguild</string>
+</array>
+<key>CFBundleURLTypes</key>
+<array>
+  <dict>
+    <key>CFBundleTypeRole</key>
+    <string>Editor</string>
+    <key>CFBundleURLSchemes</key>
+    <array>
+      <string>wx4e7fd29bf29f3e79</string>
+    </array>
+  </dict>
+  <dict>
+    <key>CFBundleTypeRole</key>
+    <string>Editor</string>
+    <key>CFBundleURLSchemes</key>
+    <array>
+      <string>tencent1112219381</string>
+    </array>
+  </dict>
+</array>
+<key>NSPhotoLibraryUsageDescription</key>
+<string>MSDK 需要使用您的相册以存储相片</string>
+<key>NSAppTransportSecurity</key>
+<dict>
+  <key>NSAllowsArbitraryLoads</key>
+  <true/>
+</dict>
+<key>NSPhotoLibraryAddUsageDescription</key>
+<string>MSDK 需要使用您的相册以存储相片</string>
+

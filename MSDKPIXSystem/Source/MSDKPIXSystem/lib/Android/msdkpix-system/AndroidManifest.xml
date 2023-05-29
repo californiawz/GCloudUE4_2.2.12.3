@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.itop.gcloud.msdk.pixui.system"
+    android:versionCode="2609"
+    android:versionName="5.30.101.2609" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="31" />
+
+    <application>
+        <provider
+            android:name="com.itop.gcloud.msdk.pixui.system.SystemFileProvider"
+            android:authorities="com.sixjoy.letsgo.system.provider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/system_share_storage" />
+        </provider>
+    </application>
+
+</manifest>

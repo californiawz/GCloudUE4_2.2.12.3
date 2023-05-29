@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--GearVR plugin additions-->
+<root xmlns:android="http://schemas.android.com/apk/res/android">
+	<!-- init section is always evaluated once per architecture -->
+	<init>
+		<log text="PixUI APL PxExtJavaAar init (shipping build)"/>
+	</init>
+
+	<proguardAdditions>
+		<insert>
+			-keep class com.pixui.** {*;}
+			-dontwarn com.pixui.**
+		</insert>
+	</proguardAdditions>
+
+	<!--依赖aar、jar包-->
+	<!--for buildGradleAdditions-->
+	<buildGradleAdditions>
+         <insert>
+           dependencies{
+           compile fileTree(dir: '/libs', include: ['*.aar'])
+           <!--compile(name: 'PxExtJava', ext: 'aar')-->
+           }
+         </insert>
+     </buildGradleAdditions>
+	 
+	 <!--指定路径-->
+	 <!--for baseBuildGradleAdditions-->
+	 <baseBuildGradleAdditions>
+		<insert>
+		allprojects {
+				repositories {
+				flatDir {
+					dirs 'src/main/libs' }
+				} 
+		}
+		</insert>
+	</baseBuildGradleAdditions>
+ 
+	<!--文件拷贝，指定源和目标-->
+	<!-- optional files or directories to copy to Intermediate/Android/APK -->
+	<resourceCopies>
+		<log text="PixUI APL PxExtJavaAar copying files for $S(Architecture)"/>
+		<copyFile src="$S(PluginDir)/Libraries/Android/PxExtJava.aar"
+				  dst="$S(BuildDir)/libs/PxExtJava.aar" />
+	</resourceCopies>
+</root>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--GearVR plugin additions-->
+<root xmlns:android="http://schemas.android.com/apk/res/android">
+	<!-- init section is always evaluated once per architecture -->
+	<init>
+		<log text="PixUI APL PxExtFFi init (shipping build)"/>
+	</init>
+ 
+	<!--文件拷贝，指定源和目标-->
+	<!-- optional files or directories to copy to Intermediate/Android/APK -->
+	<resourceCopies>
+		<log text="PixUI APL PxExtFFi copying files for $S(Architecture)"/>
+		<copyFile src="$S(PluginDir)/Libraries/Android/$S(Architecture)/libPxExtFFi.so"
+				  dst="$S(BuildDir)/libs/$S(Architecture)/libPxExtFFi.so" />
+	</resourceCopies>
+</root>

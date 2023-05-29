@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:id="@+id/msdkpopup_richtext_dialog_content"
+        android:layout_width="@dimen/msdk_popup_richtext_dialog_layout_width"
+        android:layout_height="@dimen/msdk_popup_richtext_dialog_layout_height"
+        android:layout_centerInParent="true"
+        android:background="@drawable/msdkpopup_dialog_window_write_bg">
+
+        <ImageView
+            android:id="@+id/msdkpopup_richtext_dialog_close"
+            android:layout_width="@dimen/msdk_popup_dialog_common_bt_size"
+            android:layout_height="@dimen/msdk_popup_dialog_common_bt_size"
+            android:layout_margin="@dimen/msdk_popup_dialog_common_bt_margin"
+            android:src="@drawable/msdk_popup_close"
+            android:layout_alignParentRight="true" />
+
+        <com.itop.gcloud.msdk.popup.richtext.MSDKHtmlView
+            android:id="@+id/msdkpopup_richtext_dialog_html_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/msdk_popup_richtext_dialog_richtext_height"
+            android:layout_below="@id/msdkpopup_richtext_dialog_close"
+            android:padding="@dimen/msdk_popup_richtext_dialog_richtext_padding"
+            android:textColor="@android:color/black" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/msdkpopup_richtext_dialog_html_view"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/msdkpopup_richtext_dialog_cancel"
+                style="@style/msdk_dialog_button_default"
+                android:layout_width="@dimen/msdk_popup_richtext_dialog_button_width"
+                android:layout_height="@dimen/msdk_popup_richtext_dialog_button_height"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/msdk_popup_dialog_common_bt_margin"
+                android:layout_marginRight="@dimen/msdk_popup_dialog_common_bt_margin"
+                android:text="@string/msdkpopup_dialog_common_cancel" />
+
+            <Button
+                android:id="@+id/msdkpopup_richtext_dialog_confirm"
+                style="@style/msdk_dialog_button_default"
+                android:layout_width="@dimen/msdk_popup_richtext_dialog_button_width"
+                android:layout_height="@dimen/msdk_popup_richtext_dialog_button_height"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/msdk_popup_dialog_common_bt_margin"
+                android:layout_marginRight="@dimen/msdk_popup_dialog_common_bt_margin"
+                android:text="@string/msdkpopup_dialog_common_confirm" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

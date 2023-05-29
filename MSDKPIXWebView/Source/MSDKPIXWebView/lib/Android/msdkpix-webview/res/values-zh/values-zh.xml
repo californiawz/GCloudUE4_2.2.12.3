@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="msdk_webview_cancel">取消</string>
+    <string name="msdk_webview_save_photo">存储图像</string>
+    <string name="msdk_webview_share_browser">浏览器</string>
+    <string name="msdk_webview_share_facebook">Facebook</string>
+    <string name="msdk_webview_share_moment">朋友圈</string>
+    <string name="msdk_webview_share_qq">QQ</string>
+    <string name="msdk_webview_share_qzone">QQ空间</string>
+    <string name="msdk_webview_share_wechat">微信</string>
+    <string name="msdk_webview_sure">确认</string>
+    <string name="share_browser">Browser</string>
+    <string name="share_cancel">分享取消</string>
+    <string name="share_facebook">Facebook</string>
+    <string name="share_failure">分享失败</string>
+    <string name="share_icon_desc">icon desc</string>
+    <string name="share_success">分享成功</string>
+    <string name="share_wechat">微信</string>
+</resources>

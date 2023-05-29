@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/msdk_policy_bg"
+    tools:context=".policy.MSDKPolicyActivity">
+
+    <com.itop.gcloud.msdk.core.policy.MSDKPermissionLayout
+        android:id="@+id/msdk_perimission_layout"
+        style="@style/MSDK.Policy.Popup"
+        android:layout_centerInParent="true"
+        android:visibility="invisible" />
+
+    <com.itop.gcloud.msdk.core.policy.MSDKPermissionLayoutSecond
+        android:id="@+id/msdk_perimission_layout_second"
+        style="@style/MSDK.Policy.Popup.Permission.Second"
+        android:layout_centerInParent="true"
+        android:visibility="invisible" />
+</RelativeLayout>

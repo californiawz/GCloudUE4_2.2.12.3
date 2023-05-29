@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <FrameLayout
+        android:layout_centerInParent="true"
+        android:layout_width="@dimen/msdk_policy_dialog_window_grey_bg_width"
+        android:layout_height="@dimen/msdk_policy_dialog_window_grey_bg_height"
+        android:background="@drawable/msdk_policy_dialog_grey_bg"/>
+
+    <RelativeLayout
+        android:id="@+id/msdkpopup_policy_dialog_content"
+        android:layout_width="@dimen/msdk_policy_dialog_window_width"
+        android:layout_height="@dimen/msdk_policy_dialog_window_height"
+        android:layout_centerInParent="true"
+        android:background="@drawable/msdkpopup_dialog_window_write_bg">
+
+        <com.itop.gcloud.msdk.popup.richtext.MSDKHtmlView
+            android:id="@+id/msdkpopup_policy_dialog_html_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/msdk_policy_dialog_content_land_height"
+            android:padding="@dimen/msdk_policy_dialog_content_land_padding"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/msdkpopup_policy_dialog_confirm"
+            style="@style/msdk_dialog_button_land"
+            android:layout_width="@dimen/msdk_policy_dialog_button_land_width"
+            android:layout_height="@dimen/msdk_policy_dialog_button_land_height"
+            android:layout_below="@id/msdkpopup_policy_dialog_html_view"
+            android:layout_centerHorizontal="true"
+            android:text="@string/msdkpopup_dialog_common_agree" />
+
+        <Button
+            android:id="@+id/msdkpopup_policy_dialog_cancel"
+            style="@style/msdk_dialog_button_land_other"
+            android:layout_width="@dimen/msdk_policy_dialog_button_land_width"
+            android:layout_height="@dimen/msdk_policy_dialog_button_land_height"
+            android:layout_below="@id/msdkpopup_policy_dialog_confirm"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/msdk_policy_dialog_button_land_margin"
+            android:text="@string/msdkpopup_dialog_common_reject" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.itop.gcloud.msdk.pixui.wechat"
+    android:versionCode="2609"
+    android:versionName="5.30.101.2609" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="31"
+        tools:overrideLibrary="com.tencent.mm.opensdk" />
+
+    <application>
+        <activity
+            android:name="com.itop.gcloud.msdk.pixui.wechat.WeChatAgentActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <activity-alias
+            android:name="com.sixjoy.letsgo.wxapi.WXEntryActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:enabled="true"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:targetActivity="com.itop.gcloud.msdk.pixui.wechat.WeChatAgentActivity" />
+
+        <activity
+            android:name="com.itop.gcloud.msdk.pixui.wechat.qrcode.WeChatQRCodeActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:label="WXQrCodeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.itop.gcloud.msdk.pixui.wechat.qrcode.diff"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+
+        <provider
+            android:name="com.itop.gcloud.msdk.pixui.wechat.WeChatFileProvider"
+            android:authorities="com.sixjoy.letsgo.wechat.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_paths" />
+        </provider>
+    </application>
+
+</manifest>

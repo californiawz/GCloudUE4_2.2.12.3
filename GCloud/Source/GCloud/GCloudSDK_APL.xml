@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--LogicCore additions-->
+<root xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 初始化-->
+    <init>
+        <log text="GCloud init"/>
+        <setBoolFromProperty result="bGradle" ini="Engine" section="/Script/AndroidRuntimeSettings.AndroidRuntimeSettings" property="bEnableGradle" default="false"/>
+        <if condition="bGradle">
+            <true>
+                <log text="GCloud Gradle Build"/>
+            </true>
+            <false>
+                <log text="GCloud Ant Build"/>
+            </false>
+        </if>
+    </init>
+    
+    <!--在ndk-build编译之前，从Intermediate/Android/APK中拷贝或删除文件-->
+    <prebuildCopies>
+        <log text="GCloud Copy Dirs Begin. PluginDir is $S(PluginDir), BuildDir is $S(BuildDir)"/>
+        <copyDir src="$S(PluginDir)/../GCloudLib/Android/GCloud" dst="$S(BuildDir)/JavaLibs/GCloud"/>
+    </prebuildCopies>
+    
+    <!-- optional updates applied to AndroidManifest.xml -->
+    <androidManifestUpdates>
+    </androidManifestUpdates>
+    
+    <!-- GameActivity.java中导入类 -->
+    <gameActivityImportAdditions>
+        <insert>
+            
+        </insert>
+    </gameActivityImportAdditions>
+    
+    <!--GameActivity.java导完类之后要做的事情 -->
+    <gameActivityPostImportAdditions>
+    </gameActivityPostImportAdditions>
+    
+    <!-- GameActivity.java类中添加代码 -->
+    <gameActivityClassAdditions>
+        <insert>
+        </insert>
+    </gameActivityClassAdditions>
+    
+    
+    <!--GameActivity.java onCreate添加代码 -->
+    <gameActivityOnCreateAdditions>
+        <insert>
+        </insert>
+    </gameActivityOnCreateAdditions>
+    
+    <!--GameActivity.java onDestroy添加代码-->
+    <gameActivityOnDestroyAdditions>
+        <insert>
+            
+        </insert>
+    </gameActivityOnDestroyAdditions>
+    
+    <!--GameActivity.java onStart添加代码-->
+    <gameActivityOnStartAdditions>
+        <insert>
+            
+        </insert>
+    </gameActivityOnStartAdditions>
+    
+    <!--GameActivity.java OnRestart添加代码-->
+    <gameActivityOnRestartAdditions>
+        <insert>
+            
+        </insert>
+    </gameActivityOnRestartAdditions>
+    
+    <!--GameActivity.java onStop添加代码-->
+    <gameActivityOnStopAdditions>
+        <insert>
+            
+        </insert>
+    </gameActivityOnStopAdditions>
+    
+    <!--GameActivity.java onPause添加代码-->
+    <gameActivityOnPauseAdditions>
+        <insert>
+            
+        </insert>
+    </gameActivityOnPauseAdditions>
+    
+    <!--GameActivity.java onResume添加代码-->
+    <gameActivityOnResumeAdditions>
+        <insert>
+        </insert>
+    </gameActivityOnResumeAdditions>
+    
+    <!-- GameActivity.java onActivityResult添加代码 -->
+    <gameActivityOnActivityResultAdditions>
+        <insert>
+        </insert>
+    </gameActivityOnActivityResultAdditions>
+    
+    <!--GameActivity.java OnNewIntent添加代码-->
+    <gameActivityOnNewIntentAdditions>
+        <insert>
+            
+        </insert>
+    </gameActivityOnNewIntentAdditions>
+    
+    <!--在libUE4.so库加载之前需要加载的库-->
+    <soLoadLibrary>
+        <loadLibrary name="gcloud" failmsg="GCloud library not loaded and required!"/>
+    </soLoadLibrary>
+    
+    <proguardAdditions>
+        
+        <insert>
+            -optimizationpasses 5
+            -dontusemixedcaseclassnames
+            -dontskipnonpubliclibraryclasses
+            -dontpreverify
+            -dontoptimize
+            -ignorewarnings
+            -verbose
+            -optimizations !code/simplification/arithmetic,!field/*,!class/merging/*
+            
+            -dontwarn org.apache.**
+            -dontwarn com.alipay.**
+            
+            
+            -keep class com.tencent.gcloud.**{*;}
+            -keep class com.gcloudsdk.gcloud.core.**{*;}
+            
+            #qrCode:zxing lib
+            -keep class com.google.zxing.qrcode.QRCodeWriter{*;}
+            -keep class com.google.zxing.BarcodeFormat{*;}
+            -keep class com.google.zxing.common.BitMatrix{*;}
+            
+            -keep class com.epicgames.**{*;}
+            
+            -keep public class * extends android.app.Activity
+            -keep public class * extends android.app.Application
+            -keep public class * extends android.app.Service
+            -keep public class * extends android.content.BroadcastReceiver
+            -keep public class * extends android.content.ContentProvider
+            -keep public class * extends android.app.backup.BackupAgentHelper
+            -keep public class * extends android.preference.Preference
+            -keep public class com.android.vending.licensing.ILicensingService
+            
+            -keepclassmembers enum * {
+            public static **[] values();
+            public static ** valueOf(java.lang.String);
+            }
+            
+            -keep class * implements android.os.Parcelable {
+            public static final android.os.Parcelable$Creator *;
+            }
+            
+            -keepattributes InnerClasses
+
+            #------------------  下方是共性的排除项目         ----------------
+            # 方法名中含有“JNI”字符的，认定是Java Native Interface方法，自动排除
+            # 方法名中含有“JRI”字符的，认定是Java Reflection Interface方法，自动排除
+            
+            -keepclasseswithmembers class * {
+            ... *JNI*(...);
+            }
+            
+            -keepclasseswithmembernames class * {
+            ... *JRI*(...);
+            }
+            
+            -keep class **JNI* {*;}
+            -keep class android.app.** {
+            *;
+            }
+        </insert>
+    </proguardAdditions>
+</root>
+

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <init>
+        <log text="PixUIPlugin Copy PixUI dynamic Framework PxExtFFi"/>
+        <copyDir src="$S(EngineDir)/Intermediate/UnzippedFrameworks/PxExtFFi/PxExtFFi.embeddedframework/PxExtFFi.framework" dst="$S(BuildDir)/Frameworks/PxExtFFi.framework"/>
+    </init>
+
+    <iosPListUpdates>
+        <!-- ............................For debug test permission............................. -->
+        <!--
+        <addElements tag="dict" once="true">
+            <key>UIFileSharingEnabled</key><true/>
+        </addElements>
+        -->
+    </iosPListUpdates>
+
+</root>

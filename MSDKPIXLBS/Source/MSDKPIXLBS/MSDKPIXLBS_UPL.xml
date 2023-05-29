@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--LogicCore additions-->
+<root xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+  <!-- 初始化-->
+  <init>
+    <log text="MSDK-UPL init"/>
+    <setBoolFromProperty result="bGradle" ini="Engine" section="/Script/AndroidRuntimeSettings.AndroidRuntimeSettings" property="bEnableGradle" default="false"/>
+    <if condition="bGradle">
+			<true>
+				<log text="MSDK-UPL Use Gradle Build"/>
+			</true>
+      <false>
+        <log text="MSDK-UPL Use ANT Build"/>
+      </false>
+		</if>
+  </init>
+  <!--在ndk-build编译之前，从Intermediate/Android/APK中拷贝或删除文件-->
+  <prebuildCopies>
+	<copyDir src="$S(PluginDir)/lib/Android/msdkpix-lbs" dst="$S(BuildDir)/JavaLibs/msdkpix-lbs"/>
+	</prebuildCopies>
+
+  <!-- 拷贝文件或目录到Intermediate/Android/APK  -->
+  <resourceCopies>
+    <log text="MSDK-UPL Start copy start...$S(PluginDir)" />
+  </resourceCopies>
+
+  <buildscriptGradleAdditions>  
+  <insert>
+
+  </insert>
+  </buildscriptGradleAdditions>
+
+  <baseBuildGradleAdditions>
+      <insert>
+          <![CDATA[
+
+          ]]>
+      </insert>
+  </baseBuildGradleAdditions>
+
+  <buildGradleAdditions>
+    <insert>
+
+    </insert>
+  </buildGradleAdditions>
+
+  <androidManifestUpdates>
+    <log text="MSDK-UPL AndroidManifestUpdates finish" />
+  </androidManifestUpdates>
+
+  <!--在libUE4.so库加载之前需要加载的库,MSDK.so库用于接受java端的回调-->
+  <soLoadLibrary>
+  <log text="MSDK-UPL MSDK.so loaded after libUE4.so" />
+  </soLoadLibrary>
+
+
+  <proguardAdditions>
+    <insert>
+      -keep class com.itop.gcloud.msdk.pixui.lbs.** {*;}
+    </insert>
+  </proguardAdditions>
+
+</root>

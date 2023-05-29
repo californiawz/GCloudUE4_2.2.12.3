@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--GearVR plugin additions-->
+<root xmlns:android="http://schemas.android.com/apk/res/android">
+	<!-- init section is always evaluated once per architecture -->
+	<init>
+		<log text="PixUI APL video init (shipping build)"/>
+	</init>
+	
+	<!--代码混淆-->
+	<!-- optional additions to proguard  -->
+	<proguardAdditions>
+    <!--
+		<insert>
+			-keep class com.XXXX.** {*;}
+			-dontwarn com.XXX.**
+		</insert>
+    -->
+	</proguardAdditions>
+	
+	<!--依赖aar、jar包-->
+	<!--for buildGradleAdditions-->
+	<!--
+	<buildGradleAdditions>
+         <insert>
+			dependencies{
+				compile fileTree(dir: '/libs', include: ['*.aar'])
+				compile(name: 'xxxx-release', ext: 'aar')
+			}
+         </insert>
+     </buildGradleAdditions>
+	 -->
+	 
+	 <!--指定路径-->
+	 <!--for baseBuildGradleAdditions-->
+	 <!--
+	 <baseBuildGradleAdditions>
+		<insert>
+		allprojects {
+				repositories {
+				flatDir {
+					dirs 'src/main/libs' }
+				} 
+		}
+		</insert>
+	</baseBuildGradleAdditions>
+	-->
+ 
+	<!--文件拷贝，指定源和目标-->
+	<!-- optional files or directories to copy to Intermediate/Android/APK -->
+	<resourceCopies>
+		<log text="PixUI APL video copying files for $S(Architecture)"/>
+		<copyFile src="$S(PluginDir)/Libraries/Android/$S(Architecture)/libPixFFmpeg.so"
+			dst="$S(BuildDir)/libs/$S(Architecture)/libPixFFmpeg.so" />
+		<copyFile src="$S(PluginDir)/Libraries/Android/$S(Architecture)/libPixVideo.so"
+				  dst="$S(BuildDir)/libs/$S(Architecture)/libPixVideo.so" />
+	</resourceCopies>
+	
+	<!-- optional additions to GameActivity import in GameActivity.java -->
+	<gameActivityImportAdditions>
+		<insert>
+	
+		</insert>
+	</gameActivityImportAdditions>
+  
+  
+	<!-- optional additions to GameActivity onCreate in GameActivity.java -->
+	<gameActivityOnCreateAdditions>
+		<insert>
+	
+		</insert>
+	</gameActivityOnCreateAdditions>
+ 
+	<!-- optional additions to GameActivity onDestroy in GameActivity.java -->
+	<gameActivityOnDestroyAdditions>
+		<insert>
+		
+		</insert>
+	</gameActivityOnDestroyAdditions>
+	
+	<!-- update mainifest -->
+	<androidManifestUpdates>
+		<addElements tag="manifest">
+			<uses-permission android:name="android.permission.INTERNET"/>
+
+		</addElements>
+		
+	</androidManifestUpdates>
+  
+	<!--在GameActivity.java中指定so库先于libUE4.so加载-->
+	<!-- optional libraries to load in GameActivity.java before libUE4.so -->
+	<soLoadLibrary>
+		<!-- <log text="PixUI APL video adding loadLibrary references"/>
+		<loadLibrary name="libPixVideo" failmsg="libPixVideo not loaded and required!" /> -->
+	</soLoadLibrary>
+</root>

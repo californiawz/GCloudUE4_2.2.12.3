@@ -1,0 +1,25 @@
+android{
+    sourceSets{
+        main {
+            jniLibs.srcDirs 'libs'
+            res.srcDirs 'res'
+            assets.srcDirs 'assets'
+        }
+    }
+    if(gradle.gradleVersion.startsWith("5")){ packageBuildConfig false } else { buildFeatures { buildConfig = false } }//edit by script
+    packagingOptions {
+        exclude '**/BuildConfig.class'
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
+    compile 'com.tencent.tpns:xiaomi:1.3.9.0-release'
+	compile 'com.tencent.tpns:meizu:1.3.9.0-release'
+	compile "com.tencent.tpns:huawei:1.3.9.0-release"
+	compile 'com.huawei.hms:push:6.7.0.300'
+	compile 'com.tencent.tpns:vivo:1.3.9.0-release'
+	compile 'com.google.code.gson:gson:2.6.2'
+}
+
+

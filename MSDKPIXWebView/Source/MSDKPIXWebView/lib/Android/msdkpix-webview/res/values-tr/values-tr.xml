@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="msdk_webview_cancel">İptal</string>
+    <string name="share_cancel">Paylaşma iptal edildi</string>
+    <string name="share_failure">Paylaşma başarısız</string>
+    <string name="share_success">Paylaşıldı</string>
+</resources>

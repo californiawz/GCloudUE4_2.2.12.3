@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--LogicCore additions-->
+<root xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+  <!-- 初始化-->
+  <init>
+    <log text="MSDK-UPL init"/>
+    <setBoolFromProperty result="bGradle" ini="Engine" section="/Script/AndroidRuntimeSettings.AndroidRuntimeSettings" property="bEnableGradle" default="false"/>
+    <if condition="bGradle">
+			<true>
+				<log text="MSDK-UPL Use Gradle Build"/>
+			</true>
+      <false>
+        <log text="MSDK-UPL Use ANT Build"/>
+      </false>
+		</if>
+  </init>
+  <!--在ndk-build编译之前，从Intermediate/Android/APK中拷贝或删除文件-->
+  <prebuildCopies>
+	<copyDir src="$S(PluginDir)/lib/Android/msdkpix-xg" dst="$S(BuildDir)/JavaLibs/msdkpix-xg"/>
+	</prebuildCopies>
+
+  <!-- 拷贝文件或目录到Intermediate/Android/APK  -->
+  <resourceCopies>
+    <log text="MSDK-UPL Start copy start...$S(PluginDir)" />
+  </resourceCopies>
+
+  <buildscriptGradleAdditions>  
+  <insert>
+
+  </insert>
+  </buildscriptGradleAdditions>
+
+  <baseBuildGradleAdditions>
+      <insert>
+          <![CDATA[
+          ]]>
+      </insert>
+  </baseBuildGradleAdditions>
+
+  <buildGradleAdditions>
+    <insert>
+          <![CDATA[
+android {
+  compileOptions {
+		sourceCompatibility JavaVersion.VERSION_1_7
+		targetCompatibility JavaVersion.VERSION_1_7
+	}
+}
+          ]]>
+    </insert>
+  </buildGradleAdditions>
+
+  <androidManifestUpdates>
+    <log text="MSDK-UPL AndroidManifestUpdates finish" />
+  </androidManifestUpdates>
+
+  <!--在libUE4.so库加载之前需要加载的库,MSDK.so库用于接受java端的回调-->
+  <soLoadLibrary>
+  <log text="MSDK-UPL MSDK.so loaded after libUE4.so" />
+  </soLoadLibrary>
+
+
+  <proguardAdditions>
+    <insert>
+      -keep public class * extends android.app.Service
+      -keep public class * extends android.content.BroadcastReceiver
+      -keep class com.tencent.android.tpush.** {*;}
+      -keep class com.tencent.tpns.baseapi.** {*;}
+      -keep class com.tencent.tpns.mqttchannel.** {*;}
+      -keep class com.tencent.tpns.dataacquisition.** {*;}
+      -keepattributes *Annotation*
+
+      # flyme
+      -dontwarn com.meizu.cloud.pushsdk.**
+      -keep class com.meizu.cloud.pushsdk.**{*;}
+
+      # 华为
+      -ignorewarnings
+      -keepattributes *Annotation*
+      -keepattributes Exceptions
+      -keepattributes InnerClasses
+      -keepattributes Signature
+      -keepattributes SourceFile,LineNumberTable
+      -keep class com.hianalytics.android.**{*;}
+      -keep class com.huawei.updatesdk.**{*;}
+      -keep class com.huawei.hms.**{*;}
+      -keep class com.huawei.android.hms.agent.**{*;}
+
+      # 小米
+      -keep class com.xiaomi.**{*;}
+      -keep public class * extends com.xiaomi.mipush.sdk.PushMessageReceiver
+
+      # vivo
+      -dontwarn com.vivo.push.**
+      -keep class com.vivo.push.**{*; }
+      -keep class com.vivo.vms.**{*; }
+      -keep class com.tencent.android.vivopush.VivoPushMessageReceiver{*;}
+
+      # oppo
+      -keep public class * extends android.app.Service
+      -keep class com.heytap.mcssdk.** {*;}
+      -keep class com.heytap.msp.push.** { *;}
+      -keep class com.pushsdk.** { *;}
+
+      # xg java
+      -keep class com.itop.gcloud.msdk.pixui.xg.** { *;}
+    </insert>
+  </proguardAdditions>
+
+</root>

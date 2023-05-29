@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources> 
+    <string name="gcloud_trace_url">https://cloudctrl.gcloud.qq.com/gtrace/get_traceid_list</string>
+</resources>

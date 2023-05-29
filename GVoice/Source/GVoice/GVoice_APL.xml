@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--LogicCore additions-->
+<root xmlns:android="http://schemas.android.com/apk/res/android">
+	<!-- 初始化-->
+  <init>
+    <log text="GVoice init"/>
+  </init>
+
+  <!--在ndk-build编译之前，从Intermediate/Android/APK中拷贝或删除文件-->
+  <prebuildCopies>
+    <log text="GVoice SDK Copy Dirs Begin. PluginDir is $S(PluginDir), BuildDir is $S(BuildDir)"/>
+
+    <!--copyDir src="$S(PluginDir)/../GVoiceLib/GCloudSDKLibrary/Android/" dst="$S(BuildDir)"/>
+    <copyDir src="$S(PluginDir)/../../Build/Android/" dst="$S(BuildDir)"/ -->
+  </prebuildCopies>
+
+
+  <!-- optional updates applied to AndroidManifest.xml -->
+  <androidManifestUpdates>
+    <log text="androidManifestUpdates begin" />
+
+    <log text="addPermission begin" />
+	<!-- TODO SDK接入必须权限模块 START -->
+    <addPermission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <addPermission android:name="android.permission.ACCESS_WIFI_STATE" />
+    
+    <!--GVoice Permission start-->
+    <addPermission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+	<addPermission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<addPermission android:name="android.permission.RECORD_AUDIO"/>
+	<addPermission android:name="android.permission.BLUETOOTH" />
+    <addPermission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <!--GVoice Permission end-->
+  </androidManifestUpdates>
+  
+	<!--拷贝文件或目录到Intermediate/Android/APK -->
+	<resourceCopies>
+    <log text="GVoice SDK Copy Files Begin"/>
+    
+    <log text="Start copy libs..." />
+    <copyDir src="$S(PluginDir)/../GVoiceLib/Android/libs/" dst="$S(BuildDir)/libs/"/>
+<!-- no need for jacky
+    <isArch arch="armeabi-v7a">
+      <log text="Start remove other archs from $S(BuildDir)/libs." />
+      <deleteFiles filespec="libs/armeabi/libGVoice.so"/>
+      <deleteFiles filespec="libs/arm64-v8a/libGVoice.so"/>
+      <deleteFiles filespec="libs/x86/libGVoice.so" />
+    </isArch>
+
+    <isArch arch="arm64-v8a">
+      <log text="Start remove other archs from $S(BuildDir)/libs." />
+      <deleteFiles filespec="libs/armeabi/libGVoice.so"/>
+      <deleteFiles filespec="libs/armeabi-v7a/libGVoice.so"/>
+      <deleteFiles filespec="libs/x86/libGVoice.so" />
+    </isArch>
+-->
+    <log text="Start copy res..." />
+    <copyDir src="$S(PluginDir)/../GVoiceLib/Android/assets/" dst="$S(BuildDir)/assets"/>
+    
+  </resourceCopies>
+
+	<!-- GameActivity.java中导入类 -->
+	<gameActivityImportAdditions>
+    <insert>
+      import com.gcloudsdk.gcloud.voice.GCloudVoiceEngine;
+    </insert>
+	</gameActivityImportAdditions>
+
+  <!--GameActivity.java导完类之后要做的事情 -->
+  <gameActivityPostImportAdditions>
+  </gameActivityPostImportAdditions>
+
+  <!-- GameActivity.java类中添加代码 -->
+  <gameActivityClassAdditions>
+    <insert>
+    </insert>
+  </gameActivityClassAdditions>
+
+  
+  <!--GameActivity.java onCreate添加代码 -->
+  <gameActivityOnCreateAdditions>
+    <insert>
+    
+      GCloudVoiceEngine.getInstance().init(getApplicationContext(), this);      
+      android.util.Log.i("GVoiceJava", "after java device init");
+
+    </insert>
+  </gameActivityOnCreateAdditions>
+
+  <!--GameActivity.java onDestroy添加代码-->
+  <gameActivityOnDestroyAdditions>
+  </gameActivityOnDestroyAdditions>
+  
+  <!--GameActivity.java onStart添加代码-->
+  <gameActivityOnStartAdditions>
+  </gameActivityOnStartAdditions>
+  
+  <!--GameActivity.java OnRestart添加代码-->
+  <gameActivityOnRestartAdditions>
+  </gameActivityOnRestartAdditions>
+  
+  <!--GameActivity.java onStop添加代码-->
+  <gameActivityOnStopAdditions>
+  </gameActivityOnStopAdditions>
+  
+  <!--GameActivity.java onPause添加代码-->
+  <gameActivityOnPauseAdditions>
+    <insert> 
+      try
+      {
+       android.util.Log.i("GVoiceJava", "call gvoice pause interface");
+        GCloudVoiceEngine.getInstance().Pause();      
+      }catch(Exception e)
+      {
+      }
+    </insert>
+  </gameActivityOnPauseAdditions>
+  
+  <!--GameActivity.java onResume添加代码-->
+  <gameActivityOnResumeAdditions>
+     <insert> 
+        try
+        {
+        android.util.Log.i("GVoiceJava", "call gvoice resume interface");
+          GCloudVoiceEngine.getInstance().Resume();      
+        }catch(Exception e)
+        {
+        }
+     </insert>
+  </gameActivityOnResumeAdditions>
+  
+  <!-- GameActivity.java onActivityResult添加代码 -->
+  <gameActivityOnActivityResultAdditions>
+  </gameActivityOnActivityResultAdditions>
+  
+  <!--GameActivity.java OnNewIntent添加代码-->
+  <gameActivityOnNewIntentAdditions>
+  </gameActivityOnNewIntentAdditions>
+
+	<!--在libUE4.so库加载之前需要加载的库-->
+	<soLoadLibrary>
+    <loadLibrary name="GVoice" failmsg="GVoice library not loaded and required!"/>
+	</soLoadLibrary>
+
+  <proguardAdditions>
+
+    <insert>
+
+      -keep interface com.gcloudsdk.gcloud.voice.IGCloudVoiceNotify{ *; }
+      
+      -keep class com.gcloudsdk.apollo.ApolloVoiceConfig{ *; }
+
+      -keep class com.gcloudsdk.apollo.ApolloVoiceDeviceMgr{ *; }
+
+      -keep class com.gcloudsdk.apollo.ApolloVoiceEngine{ *; }
+
+      -keep class com.gcloudsdk.apollo.ApolloVoiceNetStatus{ *; }
+
+      -keep class com.gcloudsdk.apollo.ApolloVoiceUDID{ *; }
+
+      -keep class com.gcloudsdk.apollo.apollovoice.**{ *; }
+
+      -keep class com.gcloudsdk.gcloud.voice.**{ *; }
+
+      #------------------  下方是共性的排除项目         ----------------
+      # 方法名中含有“JNI”字符的，认定是Java Native Interface方法，自动排除
+      # 方法名中含有“JRI”字符的，认定是Java Reflection Interface方法，自动排除
+
+      -keepclasseswithmembers class * {
+      ... *JNI*(...);
+      }
+
+      -keepclasseswithmembernames class * {
+      ... *JRI*(...);
+      }
+
+      -keep class **JNI* {*;}
+      -keep class android.app.** {
+      *;
+      }
+    </insert>
+  </proguardAdditions>
+</root>

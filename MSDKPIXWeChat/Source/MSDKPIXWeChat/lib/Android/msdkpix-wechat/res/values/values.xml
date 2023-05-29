@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="msdkpix_app_name">wechat</string>
+    <string name="msdkpix_wx_qrcode_status_ready">使用微信扫一扫登录游戏</string>
+    <string name="msdkpix_wx_qrcode_status_scanned">扫描成功</string>
+    <string name="msdkpix_wx_qrcode_status_scanned_prompt">请在手机上确认登录</string>
+</resources>

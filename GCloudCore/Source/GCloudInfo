@@ -1,0 +1,454 @@
+{
+    "PackageParam": {
+        "AndroidLibType": "libscpp", 
+        "AndroidSupportArchitecture": [
+            "armeabi-v7a", 
+            "x86", 
+            "arm64-v8a", 
+            "x86_64"
+        ], 
+        "AndroidSupportLib": "AndroidX", 
+        "BuildSystem": "Gradle", 
+        "Config": {
+            "{ADJUST_APP_TOKEN_ANDROID}": "{ADJUST_APP_TOKEN_ANDROID}", 
+            "{ADJUST_APP_TOKEN_IOS}": "{ADJUST_APP_TOKEN_IOS}", 
+            "{APPSFLYER_APPID}": "{APPSFLYER_APPID}", 
+            "{APPSFLYER_APP_KEY_ANDROID}": "{APPSFLYER_APP_KEY_ANDROID}", 
+            "{APPSFLYER_APP_KEY_IOS}": "{APPSFLYER_APP_KEY_IOS}", 
+            "{BEACON_APP_KEY_ANDROID}": "ANDROID1112219381", 
+            "{BEACON_APP_KEY_IOS}": "IOS1112219381", 
+            "{BUGLY_APP_ID_ANDROID}": "1112219381", 
+            "{BUGLY_APP_ID_IOS}": "i1112219381", 
+            "{BUNDLE_ID}": "com.sixjoy.letsgo", 
+            "{FACEBOOK_APPID}": "624009219651454", 
+            "{FACEBOOK_DISPLAYNAME}": "{FACEBOOK_DISPLAYNAME}", 
+            "{FIREBASE_SENDER_ID}": "{FIREBASE_SENDER_ID}", 
+            "{GAME_ID}": "745065090", 
+            "{GAME_KEY}": "bc66f98c11c67ffda74e9cbb4dee5459", 
+            "{GOOGLE_APPID}": "{GOOGLE_APPID}", 
+            "{GOOGLE_CLIENT_KEY}": "{GOOGLE_CLIENT_KEY}", 
+            "{HW_APPID}": "{HW_APPID}", 
+            "{KWAI_APP_ID}": "{KWAI_APP_ID}", 
+            "{MAIN_ACTIVITY}": "MainActivity", 
+            "{MSDK_GAME_ID}": "28045", 
+            "{MSDK_GAME_KEY}": "c853b36c7d626eef3720cfdbe2158a82", 
+            "{QQ_APPID}": "1112219381", 
+            "{TDM_APPID}": "745065090", 
+            "{TDM_SECRET_KEY}": "{TDM_SECRET_KEY}", 
+            "{TDM_SOURCE_ID}": "{TDM_SOURCE_ID}", 
+            "{TDM_SRC_ID}": "745065090", 
+            "{TWITTER_KEY_ANDROID}": "{TWITTER_KEY_ANDROID}", 
+            "{TWITTER_KEY_IOS}": "{TWITTER_KEY_IOS}", 
+            "{TWITTER_KEY}": "{TWITTER_KEY}", 
+            "{TWITTER_SECRET_ANDROID}": "{TWITTER_SECRET_ANDROID}", 
+            "{TWITTER_SECRET_IOS}": "{TWITTER_SECRET_IOS}", 
+            "{TWITTER_SECRET}": "{TWITTER_SECRET}", 
+            "{WX_APPID}": "wx4e7fd29bf29f3e79", 
+            "{XG_ACCESS_ID_ANDROID}": "{XG_ACCESS_ID_ANDROID}", 
+            "{XG_ACCESS_KEY_ANDROID}": "G7aNfd3ODOaoJKSw", 
+            "{XG_APPID}": "{XG_APPID}", 
+            "{XG_APPKEY}": "G7aNfd3ODOaoJKSw", 
+            "{XG_FCM_ENABLE}": "0", 
+            "{XG_FLYME_APP_ID}": "{XG_FLYME_APP_ID}", 
+            "{XG_FLYME_APP_KEY}": "{XG_FLYME_APP_KEY}", 
+            "{XG_OTHER_ENABLE}": "1", 
+            "{XG_XIAOMI_APP_ID}": "{XG_XIAOMI_APP_ID}", 
+            "{XG_XIAOMI_APP_KEY}": "{XG_XIAOMI_APP_KEY}", 
+            "{XY_GAME_ID}": "{XY_GAME_ID}"
+        }, 
+        "CppVersion": "C11", 
+        "Dynamic": "YES", 
+        "Engine": "UE4", 
+        "GCloudSDKVersion": "2.2.12.3", 
+        "ITOPSubplugins": [], 
+        "InputPlugins": {
+            "GCloud": "/data1/gcloud_plugins/release_plugins/2.2.12hotfix/GCloud/2.12.01.201744", 
+            "GCloudCore": "/data1/gcloud_plugins/release_plugins/master/GCloudCore/1.5.01.3201", 
+            "GVoice": "/data1/gcloud_plugins/release_plugins/master/GVoice/3.7.00.1479", 
+            "MSDKPIXBeacon": "/data1/gcloud_plugins/release_plugins/master/MSDKPIXBeacon/5.30.101.2609", 
+            "MSDKPIXBugly": "/data1/gcloud_plugins/release_plugins/master/MSDKPIXBugly/5.30.101.2609", 
+            "MSDKPIXCore": "/data1/gcloud_plugins/release_plugins/2.2.12.2hotfix/MSDKPIXCore/5.30.101.2614", 
+            "MSDKPIXLBS": "/data1/gcloud_plugins/release_plugins/master/MSDKPIXLBS/5.30.101.2609", 
+            "MSDKPIXQQ": "/data1/gcloud_plugins/release_plugins/master/MSDKPIXQQ/5.30.101.2609", 
+            "MSDKPIXSystem": "/data1/gcloud_plugins/release_plugins/master/MSDKPIXSystem/5.30.101.2609", 
+            "MSDKPIXTDM": "/data1/gcloud_plugins/release_plugins/master/MSDKPIXTDM/5.30.101.2609", 
+            "MSDKPIXWeChat": "/data1/gcloud_plugins/release_plugins/master/MSDKPIXWeChat/5.30.101.2609", 
+            "MSDKPIXWebView": "/data1/gcloud_plugins/release_plugins/master/MSDKPIXWebView/5.30.101.2609", 
+            "MSDKPIXXG": "/data1/gcloud_plugins/release_plugins/master/MSDKPIXXG/5.30.101.2609", 
+            "PixUI": "/data1/gcloud_plugins/release_plugins/master/PixUI/1.0.000.1108", 
+            "PluginCrosCurl": "/data1/gcloud_plugins/release_plugins/master/PluginCrosCurl/1.0.000.1023", 
+            "TDM": "/data1/gcloud_plugins/release_plugins/master/TDM/1.28.005.2077", 
+            "UnionAdapter": "/data1/gcloud_plugins/release_plugins/master/UnionAdapter/5.30.001.7178"
+        }, 
+        "OutputDir": "/data1/tmp/sdkcompress/880495ecbf2287710c9791610114cdbb", 
+        "PluginVersion": "2.2.12.3", 
+        "Plugins": [
+            "GCloud", 
+            "GCloudCore", 
+            "GVoice", 
+            "MSDKPIXBeacon", 
+            "MSDKPIXBugly", 
+            "MSDKPIXCore", 
+            "MSDKPIXLBS", 
+            "MSDKPIXQQ", 
+            "MSDKPIXSystem", 
+            "MSDKPIXTDM", 
+            "MSDKPIXWeChat", 
+            "MSDKPIXWebView", 
+            "MSDKPIXXG", 
+            "PixUI", 
+            "PluginCrosCurl", 
+            "TDM", 
+            "UnionAdapter"
+        ], 
+        "SDKVersions": {
+            "GCloudCore": "2.2.12.3", 
+            "GVoice": "2.2.12.3", 
+            "MSDKPIXBeacon": "2.2.12.3", 
+            "MSDKPIXBugly": "2.2.12.3", 
+            "MSDKPIXCore": "2.2.12.3", 
+            "MSDKPIXLBS": "2.2.12.3", 
+            "MSDKPIXQQ": "2.2.12.3", 
+            "MSDKPIXSystem": "2.2.12.3", 
+            "MSDKPIXTDM": "2.2.12.3", 
+            "MSDKPIXWeChat": "2.2.12.3", 
+            "MSDKPIXWebView": "2.2.12.3", 
+            "MSDKPIXXG": "2.2.12.3", 
+            "PixUI": "2.2.12.3", 
+            "PluginCrosCurl": "2.2.12.3", 
+            "TDM": "2.2.12.3", 
+            "UnionAdapter": "2.2.12.3", 
+            "connector": "2.2.12.3"
+        }, 
+        "SupportPlatform": [
+            "iOS", 
+            "Android", 
+            "Win", 
+            "Mac"
+        ], 
+        "TDMType": "local", 
+        "UnityVersion": ""
+    }, 
+    "PackageTime": "2023-05-29 14:16:00", 
+    "PackageVersions": {
+        "GCloud": "2.12.01.201744", 
+        "GCloudCore": "1.5.01.3201", 
+        "GVoice": "3.7.00.1479", 
+        "MSDKPIXBeacon": "5.30.101.2609", 
+        "MSDKPIXBugly": "5.30.101.2609", 
+        "MSDKPIXCore": "5.30.101.2614", 
+        "MSDKPIXLBS": "5.30.101.2609", 
+        "MSDKPIXQQ": "5.30.101.2609", 
+        "MSDKPIXSystem": "5.30.101.2609", 
+        "MSDKPIXTDM": "5.30.101.2609", 
+        "MSDKPIXWeChat": "5.30.101.2609", 
+        "MSDKPIXWebView": "5.30.101.2609", 
+        "MSDKPIXXG": "5.30.101.2609", 
+        "PixUI": "1.0.000.1108", 
+        "PluginCrosCurl": "1.0.000.1023", 
+        "TDM": "1.28.005.2077", 
+        "UnionAdapter": "5.30.001.7178"
+    }, 
+    "ReplaceInfo": [
+        {
+            "File": "/MSDKPIXCore/Source/MSDKPIXCore/lib/Android/assets/MSDKConfig.ini", 
+            "KeyStr": "{MSDK_GAME_ID}", 
+            "LineNum": 12, 
+            "ReplaceStr": "28045"
+        }, 
+        {
+            "File": "/MSDKPIXCore/Source/MSDKPIXCore/lib/Android/assets/MSDKConfig.ini", 
+            "KeyStr": "{MSDK_GAME_KEY}", 
+            "LineNum": 13, 
+            "ReplaceStr": "c853b36c7d626eef3720cfdbe2158a82"
+        }, 
+        {
+            "File": "/MSDKPIXCore/Source/MSDKPIXCore/lib/Android/assets/MSDKConfig.ini", 
+            "KeyStr": "{KWAI_APP_ID}", 
+            "LineNum": 49, 
+            "ReplaceStr": "{KWAI_APP_ID}"
+        }, 
+        {
+            "File": "/MSDKPIXCore/Source/MSDKPIXCore/lib/Android/assets/MSDKConfig.ini", 
+            "KeyStr": "{WX_APPID}", 
+            "LineNum": 75, 
+            "ReplaceStr": "wx4e7fd29bf29f3e79"
+        }, 
+        {
+            "File": "/MSDKPIXCore/Source/MSDKPIXCore/lib/Android/assets/MSDKConfig.ini", 
+            "KeyStr": "{FACEBOOK_APPID}", 
+            "LineNum": 81, 
+            "ReplaceStr": "624009219651454"
+        }, 
+        {
+            "File": "/MSDKPIXCore/Source/MSDKPIXCore/lib/Android/assets/MSDKConfig.ini", 
+            "KeyStr": "{FACEBOOK_DISPLAYNAME}", 
+            "LineNum": 82, 
+            "ReplaceStr": "{FACEBOOK_DISPLAYNAME}"
+        }, 
+        {
+            "File": "/MSDKPIXCore/Source/MSDKPIXCore/lib/Android/assets/MSDKConfig.ini", 
+            "KeyStr": "{QQ_APPID}", 
+            "LineNum": 86, 
+            "ReplaceStr": "1112219381"
+        }, 
+        {
+            "File": "/MSDKPIXCore/Source/MSDKPIXCore/lib/Android/assets/MSDKConfig.ini", 
+            "KeyStr": "{TDM_SRC_ID}", 
+            "LineNum": 90, 
+            "ReplaceStr": "745065090"
+        }, 
+        {
+            "File": "/MSDKPIXCore/Source/MSDKPIXCore/lib/Android/assets/MSDKConfig.ini", 
+            "KeyStr": "{BEACON_APP_KEY_IOS}", 
+            "LineNum": 93, 
+            "ReplaceStr": "IOS1112219381"
+        }, 
+        {
+            "File": "/MSDKPIXCore/Source/MSDKPIXCore/lib/Android/assets/MSDKConfig.ini", 
+            "KeyStr": "{BEACON_APP_KEY_ANDROID}", 
+            "LineNum": 94, 
+            "ReplaceStr": "ANDROID1112219381"
+        }, 
+        {
+            "File": "/MSDKPIXCore/Source/MSDKPIXCore/lib/Android/assets/MSDKConfig.ini", 
+            "KeyStr": "{ADJUST_APP_TOKEN_ANDROID}", 
+            "LineNum": 100, 
+            "ReplaceStr": "{ADJUST_APP_TOKEN_ANDROID}"
+        }, 
+        {
+            "File": "/MSDKPIXCore/Source/MSDKPIXCore/lib/Android/assets/MSDKConfig.ini", 
+            "KeyStr": "{ADJUST_APP_TOKEN_IOS}", 
+            "LineNum": 106, 
+            "ReplaceStr": "{ADJUST_APP_TOKEN_IOS}"
+        }, 
+        {
+            "File": "/MSDKPIXCore/Source/MSDKPIXCore/lib/Android/assets/MSDKConfig.ini", 
+            "KeyStr": "{APPSFLYER_APPID}", 
+            "LineNum": 115, 
+            "ReplaceStr": "{APPSFLYER_APPID}"
+        }, 
+        {
+            "File": "/MSDKPIXCore/Source/MSDKPIXCore/lib/Android/assets/MSDKConfig.ini", 
+            "KeyStr": "{APPSFLYER_APP_KEY_IOS}", 
+            "LineNum": 116, 
+            "ReplaceStr": "{APPSFLYER_APP_KEY_IOS}"
+        }, 
+        {
+            "File": "/MSDKPIXCore/Source/MSDKPIXCore/lib/Android/assets/MSDKConfig.ini", 
+            "KeyStr": "{APPSFLYER_APP_KEY_ANDROID}", 
+            "LineNum": 117, 
+            "ReplaceStr": "{APPSFLYER_APP_KEY_ANDROID}"
+        }, 
+        {
+            "File": "/MSDKPIXCore/Source/MSDKPIXCore/lib/Android/assets/MSDKConfig.ini", 
+            "KeyStr": "{FIREBASE_SENDER_ID}", 
+            "LineNum": 118, 
+            "ReplaceStr": "{FIREBASE_SENDER_ID}"
+        }, 
+        {
+            "File": "/MSDKPIXCore/Source/MSDKPIXCore/lib/Android/assets/MSDKConfig.ini", 
+            "KeyStr": "{XG_APPID}", 
+            "LineNum": 122, 
+            "ReplaceStr": "{XG_APPID}"
+        }, 
+        {
+            "File": "/MSDKPIXCore/Source/MSDKPIXCore/lib/Android/assets/MSDKConfig.ini", 
+            "KeyStr": "{XG_APPKEY}", 
+            "LineNum": 123, 
+            "ReplaceStr": "G7aNfd3ODOaoJKSw"
+        }, 
+        {
+            "File": "/MSDKPIXCore/Source/MSDKPIXCore/lib/Android/assets/MSDKConfig.ini", 
+            "KeyStr": "{XG_ACCESS_ID_ANDROID}", 
+            "LineNum": 125, 
+            "ReplaceStr": "{XG_ACCESS_ID_ANDROID}"
+        }, 
+        {
+            "File": "/MSDKPIXCore/Source/MSDKPIXCore/lib/Android/assets/MSDKConfig.ini", 
+            "KeyStr": "{XG_ACCESS_KEY_ANDROID}", 
+            "LineNum": 126, 
+            "ReplaceStr": "G7aNfd3ODOaoJKSw"
+        }, 
+        {
+            "File": "/MSDKPIXCore/Source/MSDKPIXCore/lib/Android/assets/MSDKConfig.ini", 
+            "KeyStr": "{XG_OTHER_ENABLE}", 
+            "LineNum": 128, 
+            "ReplaceStr": "1"
+        }, 
+        {
+            "File": "/MSDKPIXCore/Source/MSDKPIXCore/lib/Android/assets/MSDKConfig.ini", 
+            "KeyStr": "{XG_XIAOMI_APP_ID}", 
+            "LineNum": 130, 
+            "ReplaceStr": "{XG_XIAOMI_APP_ID}"
+        }, 
+        {
+            "File": "/MSDKPIXCore/Source/MSDKPIXCore/lib/Android/assets/MSDKConfig.ini", 
+            "KeyStr": "{XG_XIAOMI_APP_KEY}", 
+            "LineNum": 131, 
+            "ReplaceStr": "{XG_XIAOMI_APP_KEY}"
+        }, 
+        {
+            "File": "/MSDKPIXCore/Source/MSDKPIXCore/lib/Android/assets/MSDKConfig.ini", 
+            "KeyStr": "{XG_FLYME_APP_ID}", 
+            "LineNum": 134, 
+            "ReplaceStr": "{XG_FLYME_APP_ID}"
+        }, 
+        {
+            "File": "/MSDKPIXCore/Source/MSDKPIXCore/lib/Android/assets/MSDKConfig.ini", 
+            "KeyStr": "{XG_FLYME_APP_KEY}", 
+            "LineNum": 135, 
+            "ReplaceStr": "{XG_FLYME_APP_KEY}"
+        }, 
+        {
+            "File": "/MSDKPIXCore/Source/MSDKPIXCore/lib/Android/assets/MSDKConfig.ini", 
+            "KeyStr": "{BUGLY_APP_ID_ANDROID}", 
+            "LineNum": 142, 
+            "ReplaceStr": "1112219381"
+        }, 
+        {
+            "File": "/MSDKPIXCore/Source/MSDKPIXCore/lib/Android/assets/MSDKConfig.ini", 
+            "KeyStr": "{BUGLY_APP_ID_IOS}", 
+            "LineNum": 143, 
+            "ReplaceStr": "i1112219381"
+        }, 
+        {
+            "File": "/MSDKPIXCore/Source/MSDKPIXCore/lib/Android/assets/MSDKConfig.ini", 
+            "KeyStr": "{GOOGLE_APPID}", 
+            "LineNum": 166, 
+            "ReplaceStr": "{GOOGLE_APPID}"
+        }, 
+        {
+            "File": "/MSDKPIXCore/Source/MSDKPIXCore/lib/Android/assets/MSDKConfig.ini", 
+            "KeyStr": "{GOOGLE_CLIENT_KEY}", 
+            "LineNum": 167, 
+            "ReplaceStr": "{GOOGLE_CLIENT_KEY}"
+        }, 
+        {
+            "File": "/MSDKPIXCore/Source/MSDKPIXCore/lib/Android/assets/MSDKConfig.ini", 
+            "KeyStr": "{TWITTER_KEY_IOS}", 
+            "LineNum": 173, 
+            "ReplaceStr": "{TWITTER_KEY_IOS}"
+        }, 
+        {
+            "File": "/MSDKPIXCore/Source/MSDKPIXCore/lib/Android/assets/MSDKConfig.ini", 
+            "KeyStr": "{TWITTER_SECRET_IOS}", 
+            "LineNum": 174, 
+            "ReplaceStr": "{TWITTER_SECRET_IOS}"
+        }, 
+        {
+            "File": "/MSDKPIXCore/Source/MSDKPIXCore/lib/Android/assets/MSDKConfig.ini", 
+            "KeyStr": "{TWITTER_KEY_ANDROID}", 
+            "LineNum": 175, 
+            "ReplaceStr": "{TWITTER_KEY_ANDROID}"
+        }, 
+        {
+            "File": "/MSDKPIXCore/Source/MSDKPIXCore/lib/Android/assets/MSDKConfig.ini", 
+            "KeyStr": "{TWITTER_SECRET_ANDROID}", 
+            "LineNum": 176, 
+            "ReplaceStr": "{TWITTER_SECRET_ANDROID}"
+        }, 
+        {
+            "File": "/MSDKPIXWeChat/Source/MSDKPIXWeChat/lib/Android/msdkpix-wechat/AndroidManifest.xml", 
+            "KeyStr": "{BUNDLE_ID}", 
+            "LineNum": 22, 
+            "ReplaceStr": "com.sixjoy.letsgo"
+        }, 
+        {
+            "File": "/MSDKPIXWeChat/Source/MSDKPIXWeChat/lib/Android/msdkpix-wechat/AndroidManifest.xml", 
+            "KeyStr": "{BUNDLE_ID}", 
+            "LineNum": 44, 
+            "ReplaceStr": "com.sixjoy.letsgo"
+        }, 
+        {
+            "File": "/MSDKPIXSystem/Source/MSDKPIXSystem/lib/Android/msdkpix-system/AndroidManifest.xml", 
+            "KeyStr": "{BUNDLE_ID}", 
+            "LineNum": 14, 
+            "ReplaceStr": "com.sixjoy.letsgo"
+        }, 
+        {
+            "File": "/GCloudCore/Source/GCloudCoreLib/Android/GCloudCore/AndroidManifest.xml", 
+            "KeyStr": "{GAME_ID}", 
+            "LineNum": 26, 
+            "ReplaceStr": "745065090"
+        }, 
+        {
+            "File": "/GCloudCore/Source/GCloudCoreLib/Android/GCloudCore/AndroidManifest.xml", 
+            "KeyStr": "{GAME_KEY}", 
+            "LineNum": 27, 
+            "ReplaceStr": "bc66f98c11c67ffda74e9cbb4dee5459"
+        }, 
+        {
+            "File": "/GCloud/Source/GCloudLib/Android/GCloud/AndroidManifest.xml", 
+            "KeyStr": "{BUNDLE_ID}", 
+            "LineNum": 40, 
+            "ReplaceStr": "com.sixjoy.letsgo"
+        }, 
+        {
+            "File": "/MSDKPIXXG/Source/MSDKPIXXG/lib/Android/msdkpix-xg/AndroidManifest.xml", 
+            "KeyStr": "{BUNDLE_ID}", 
+            "LineNum": 15, 
+            "ReplaceStr": "com.sixjoy.letsgo"
+        }, 
+        {
+            "File": "/MSDKPIXXG/Source/MSDKPIXXG/lib/Android/msdkpix-xg/AndroidManifest.xml", 
+            "KeyStr": "{BUNDLE_ID}", 
+            "LineNum": 18, 
+            "ReplaceStr": "com.sixjoy.letsgo"
+        }, 
+        {
+            "File": "/MSDKPIXXG/Source/MSDKPIXXG/lib/Android/msdkpix-xg/AndroidManifest.xml", 
+            "KeyStr": "{BUNDLE_ID}", 
+            "LineNum": 49, 
+            "ReplaceStr": "com.sixjoy.letsgo"
+        }, 
+        {
+            "File": "/MSDKPIXXG/Source/MSDKPIXXG/lib/Android/msdkpix-xg/AndroidManifest.xml", 
+            "KeyStr": "{BUNDLE_ID}", 
+            "LineNum": 83, 
+            "ReplaceStr": "com.sixjoy.letsgo"
+        }, 
+        {
+            "File": "/MSDKPIXXG/Source/MSDKPIXXG/lib/Android/msdkpix-xg/AndroidManifest.xml", 
+            "KeyStr": "{BUNDLE_ID}", 
+            "LineNum": 89, 
+            "ReplaceStr": "com.sixjoy.letsgo"
+        }, 
+        {
+            "File": "/MSDKPIXXG/Source/MSDKPIXXG/lib/Android/msdkpix-xg/AndroidManifest.xml", 
+            "KeyStr": "{BUNDLE_ID}", 
+            "LineNum": 128, 
+            "ReplaceStr": "com.sixjoy.letsgo"
+        }, 
+        {
+            "File": "/MSDKPIXXG/Source/MSDKPIXXG/lib/Android/msdkpix-xg/AndroidManifest.xml", 
+            "KeyStr": "{BUNDLE_ID}", 
+            "LineNum": 136, 
+            "ReplaceStr": "com.sixjoy.letsgo"
+        }, 
+        {
+            "File": "/MSDKPIXXG/Source/MSDKPIXXG/lib/Android/msdkpix-xg/AndroidManifest.xml", 
+            "KeyStr": "{BUNDLE_ID}", 
+            "LineNum": 144, 
+            "ReplaceStr": "com.sixjoy.letsgo"
+        }, 
+        {
+            "File": "/MSDKPIXXG/Source/MSDKPIXXG/lib/Android/msdkpix-xg/AndroidManifest.xml", 
+            "KeyStr": "{BUNDLE_ID}", 
+            "LineNum": 149, 
+            "ReplaceStr": "com.sixjoy.letsgo"
+        }, 
+        {
+            "File": "/MSDKPIXXG/Source/MSDKPIXXG/lib/Android/msdkpix-xg/AndroidManifest.xml", 
+            "KeyStr": "{BUNDLE_ID}", 
+            "LineNum": 175, 
+            "ReplaceStr": "com.sixjoy.letsgo"
+        }, 
+        {
+            "File": "/MSDKPIXXG/Source/MSDKPIXXG/lib/Android/msdkpix-xg/AndroidManifest.xml", 
+            "KeyStr": "{HW_APPID}", 
+            "LineNum": 220, 
+            "ReplaceStr": "{HW_APPID}"
+        }
+    ]
+}

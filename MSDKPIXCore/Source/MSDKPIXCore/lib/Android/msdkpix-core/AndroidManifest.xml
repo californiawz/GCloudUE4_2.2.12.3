@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.itop.gcloud.msdk.pixui.core"
+    android:versionCode="2614"
+    android:versionName="5.30.101.2614" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="31" />
+
+    <application>
+        <activity
+            android:name="com.itop.gcloud.msdk.core.policy.MSDKPolicyActivity"
+            android:exported="true" >
+
+            <!-- 用于标记协议版本，如果协议有更新，则往上累加，请填写整数值 -->
+            <meta-data
+                android:name="MSDK_POLICY_VERSION"
+                android:value="1" />
+        </activity>
+    </application>
+
+</manifest>

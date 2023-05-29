@@ -1,0 +1,27 @@
+{
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "1.0",
+  "FriendlyName": "TDM",
+  "Description": "",
+  "Category": "Other",
+  "CreatedBy": "TDM",
+  "CreatedByURL": "",
+  "DocsURL": "",
+  "MarketplaceURL": "",
+  "SupportURL": "",
+  "CanContainContent": true,
+  "IsBetaVersion": false,
+  "Installed": false,
+  "Modules": [
+    {
+      "Name": "TDM",
+      "Type": "Runtime",
+      "LoadingPhase": "Default",
+      "BlacklistPlatforms":
+      [
+          "Linux"
+      ]
+    }
+  ]
+}

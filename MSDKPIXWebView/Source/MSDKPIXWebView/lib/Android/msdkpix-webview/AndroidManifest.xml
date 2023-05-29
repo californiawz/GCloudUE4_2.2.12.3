@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.itop.gcloud.msdk.pixui.webview"
+    android:versionCode="2609"
+    android:versionName="5.30.101.2609" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="31" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+    <application>
+        <activity
+            android:name="com.itop.gcloud.msdk.pixui.webview.WebViewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|navigation|fontScale|locale"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTask"
+            android:process=":msdk_inner_webview"
+            android:screenOrientation="locked"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.itop.gcloud.msdk.pixui.webview.WebViewIPCActivity"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+    </application>
+
+</manifest>

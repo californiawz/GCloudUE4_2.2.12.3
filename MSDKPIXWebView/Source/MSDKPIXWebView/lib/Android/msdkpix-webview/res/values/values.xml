@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ShareChannel">
+        <item>Facebook</item>
+        <item>WeChat</item>
+    </string-array>
+    <string-array name="urlKeyFilter">
+        <item>key1</item>
+        <item>key2</item>
+        <item>key3</item>
+    </string-array>
+    <color name="black">#ff000000</color>
+    <color name="btn_back">#3E3E3E</color>
+    <color name="btn_normal">#00000000</color>
+    <color name="btn_pressed">#535353</color>
+    <color name="colorCoverBg">#D9060C17</color>
+    <color name="colorFonts">#CAAE7D</color>
+    <color name="colorLine">#101A2A</color>
+    <color name="colorShareAllBg">#99000000</color>
+    <color name="colorShareBtnBg">#484848</color>
+    <color name="colorToastText">#A6E1FF</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="menu_normal">#3c3f43</color>
+    <color name="menu_pressed">#4d4d4d</color>
+    <color name="menu_text">#ff333333</color>
+    <color name="menu_text_shadow">#80ffffff</color>
+    <color name="more_text_shadow">#ff000000</color>
+    <color name="share_text">#c3c3c3</color>
+    <color name="theme_page_bg_normal">#ffffffff</color>
+    <color name="titlebar">#000000</color>
+    <color name="titlebar_text">#b1b0b0</color>
+    <color name="toolbar_invisible">#232323</color>
+    <color name="toolbar_visible">#333333</color>
+    <color name="transparent">#00000000</color>
+    <color name="white">#ffffffff</color>
+    <dimen name="btn_margin">11dp</dimen>
+    <dimen name="btn_margin_half">8dp</dimen>
+    <dimen name="cancel_font_size">20sp</dimen>
+    <dimen name="fling_limit_x">120dp</dimen>
+    <dimen name="fling_limit_y">20dp</dimen>
+    <dimen name="grid_icon_height">50dp</dimen>
+    <dimen name="grid_padding_top">3dp</dimen>
+    <dimen name="title_font_size">15sp</dimen>
+    <dimen name="titlebar_height">38dp</dimen>
+    <dimen name="titlebar_text_size">15sp</dimen>
+    <dimen name="titlebar_text_width">195dp</dimen>
+    <dimen name="toast_bg_height">35dp</dimen>
+    <dimen name="toast_height">29dp</dimen>
+    <dimen name="toast_padding_lr">30dp</dimen>
+    <dimen name="toast_width">133dp</dimen>
+    <dimen name="toolbar_height">44dp</dimen>
+    <drawable name="delete_bg">#413e3e</drawable>
+    <drawable name="share_items_bg">#393939</drawable>
+    <drawable name="sheet_cancel_btn_click">#5c5858</drawable>
+    <drawable name="sheet_cancel_btn_normal">#4c4949</drawable>
+    <drawable name="transparent">#00000000</drawable>
+    <string name="app_name">webview</string>
+    <string name="back">回到游戏</string>
+    <string name="cancel">取消</string>
+    <string name="confirm">确定</string>
+    <string name="copy_sucsess">已复制到剪切板</string>
+    <string name="copylink">复制链接地址</string>
+    <string name="fav">收藏页面</string>
+    <string name="fitscreen">适应屏幕</string>
+    <string name="image_viewer_save_failed">图片保存失败</string>
+    <string name="menu_bookmark">存为浏览器书签</string>
+    <string name="menu_fav">收藏</string>
+    <string name="menu_readmode">阅读器</string>
+    <string name="menu_saveflow">省流模式</string>
+    <string name="msdk_more_shareToQQ">分享至QQ</string>
+    <string name="msdk_more_shareToQQ_url_too_long">分享的链接地址字段长度超过500，分享失败</string>
+    <string name="msdk_more_shareToQzone">分享至空间</string>
+    <string name="msdk_more_shareToWx">分享至微信</string>
+    <string name="msdk_more_shareToWxFriend">分享至朋友圈</string>
+    <string name="msdk_uninstall_qq">"检测到未安装手Q，请安装手Q后再分享！"</string>
+    <string name="msdk_uninstall_wx">"检测到未安装微信，请安装微信后再分享！"</string>
+    <string name="msdk_untitle_share">"无标题"</string>
+    <string name="msdk_upload_file_title">"上传文件"</string>
+    <string name="msdk_webview_cancel">CANCEL</string>
+    <string name="msdk_webview_save_photo">Save Photo</string>
+    <string name="msdk_webview_share_browser">Browser</string>
+    <string name="msdk_webview_share_facebook">Facebook</string>
+    <string name="msdk_webview_share_moment">Moment</string>
+    <string name="msdk_webview_share_qq">QQ</string>
+    <string name="msdk_webview_share_qzone">QZone</string>
+    <string name="msdk_webview_share_wechat">Wechat</string>
+    <string name="msdk_webview_sure">Sure</string>
+    <string name="openbrowser">浏览器打开</string>
+    <string name="openqbx">QQ浏览器打开</string>
+    <string name="recom_mtt_content">访问网络安全、极速、省流量</string>
+    <string name="recom_mtt_title">下载QQ浏览器</string>
+    <string name="save_pic_item">保存到手机</string>
+    <string name="save_pic_title">图片</string>
+    <string name="save_success">成功保存到相册</string>
+    <string name="share">分享页面</string>
+    <string name="share_browser">Browser</string>
+    <string name="share_cancel">Share Cancel</string>
+    <string name="share_facebook">Facebook</string>
+    <string name="share_failure">Share Failure</string>
+    <string name="share_icon_desc">icon desc</string>
+    <string name="share_more">以下调用手机软件分享</string>
+    <string name="share_qq">分享到好友/群</string>
+    <string name="share_success">Shared</string>
+    <string name="share_to">分享到</string>
+    <string name="share_wechat">WeChat</string>
+    <string name="sharepage_find_app_fail">程序未找到，请重新选择</string>
+    <string name="ss">发表说说</string>
+    <string name="unfetch_url">未获取网页地址</string>
+</resources>

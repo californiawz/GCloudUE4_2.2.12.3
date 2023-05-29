@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--LogicCore additions-->
+<root xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <!-- 初始化-->
+    <init>
+        <log text="TDM-UPL init"/>
+        <setBoolFromProperty result="bGradle" ini="Engine" section="/Script/AndroidRuntimeSettings.AndroidRuntimeSettings" property="bEnableGradle" default="false"/>
+        <if condition="bGradle">
+            <true>
+                <log text="TDM-UPL Use Gradle Build"/>
+            </true>
+            <false>
+                <log text="TDM-UPL Use ANT Build"/>
+            </false>
+        </if>
+    </init>
+    <!--在ndk-build编译之前，从Intermediate/Android/APK中拷贝或删除文件-->
+    <prebuildCopies>
+        <copyDir src="$S(PluginDir)/lib/Android/TDM" dst="$S(BuildDir)/JavaLibs/TDM"/>
+    </prebuildCopies>
+    
+    <!-- 拷贝文件或目录到Intermediate/Android/APK  -->
+    <resourceCopies>
+        <log text="TDM-UPL Start copy start...$S(PluginDir)" />
+    </resourceCopies>
+    
+    <buildscriptGradleAdditions>
+        <insert>
+            
+        </insert>
+    </buildscriptGradleAdditions>
+    
+    <baseBuildGradleAdditions>
+        
+    </baseBuildGradleAdditions>
+    
+    <buildGradleAdditions>
+        <insert>
+            <![CDATA[
+                
+            ]]>
+        </insert>
+    </buildGradleAdditions>
+
+    <proguardAdditions>
+        <insert>
+            -keep class com.tencent.tdmbeacon.** { *; }
+            -keep class com.tencent.tdmqmsp.** { *; }
+            -keep class com.tdatamaster.tdm.** {*;}
+            -keep class com.tdatamaster.** {*;}
+            -dontwarn okhttp3.*
+            -keep class com.tencent.tdm.** {*;}
+        </insert>
+    </proguardAdditions>
+    
+</root>

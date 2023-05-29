@@ -1,0 +1,4 @@
+-keep class com.tdatamaster.** {*;}
+-dontwarn okhttp3.*
+-keep class com.tencent.tdmbeacon.** { *; }
+-keep class com.tencent.tdm.** {*;}

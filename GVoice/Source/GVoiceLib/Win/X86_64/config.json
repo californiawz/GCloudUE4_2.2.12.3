@@ -1,0 +1,16 @@
+
+{
+    "cdnvister":
+    {
+        "default_url":
+        {
+            "remoteConfigUrl":"https://idcconfig.gcloudsdk.com:443",
+            "logReportUrl":"https://tglog.gcloudsdk.com:443",
+            "voiceReportUrl":"https://harmony.voice.gcloudsdk.com:443",
+            "voiceTranslateUrl":"https://api.translator.voice.gcloudsdk.com:443",
+            "voiceUrl":"udp://cn.voice.gcloudcs.com:10001",
+            "flqUrl":"udp://cdn.cn.gcloudcs.com:18301",
+            "dataReportUrl":"udp://qosidc.gcloudsdk.com:8011"
+        }
+    }
+}

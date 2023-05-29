@@ -1,0 +1,19 @@
+android{
+    sourceSets{
+        main {
+            jniLibs.srcDirs 'libs'
+            res.srcDirs 'res'
+            assets.srcDirs 'assets'
+        }
+    }
+    if(gradle.gradleVersion.startsWith("5")){ packageBuildConfig false } else { buildFeatures { buildConfig = false } }//edit by script
+    packagingOptions {
+        exclude '**/BuildConfig.class'
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
+    compile 'com.squareup.okhttp3:okhttp:3.12.12'
+	compile rootProject.ext.androidSupportDependencies.appCompat
+}

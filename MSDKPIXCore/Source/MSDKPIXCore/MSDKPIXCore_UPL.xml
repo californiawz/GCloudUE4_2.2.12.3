@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--LogicCore additions-->
+<root xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+  <!-- 初始化-->
+  <init>
+    <log text="MSDK-UPL init"/>
+    <setBoolFromProperty result="bGradle" ini="Engine" section="/Script/AndroidRuntimeSettings.AndroidRuntimeSettings" property="bEnableGradle" default="false"/>
+    <if condition="bGradle">
+			<true>
+				<log text="MSDK-UPL Use Gradle Build"/>
+			</true>
+      <false>
+        <log text="MSDK-UPL Use ANT Build"/>
+      </false>
+		</if>
+  </init>
+  <!--在ndk-build编译之前，从Intermediate/Android/APK中拷贝或删除文件-->
+  <prebuildCopies>
+	<copyDir src="$S(PluginDir)/lib/Android/msdkpix-core" dst="$S(BuildDir)/JavaLibs/msdkpix-core"/>
+	</prebuildCopies>
+
+  <!-- 拷贝文件或目录到Intermediate/Android/APK  -->
+  <resourceCopies>
+    <log text="MSDK-UPL Start copy start...$S(PluginDir)" />
+    <copyDir src="$S(PluginDir)/lib/Android/assets/" dst="$S(BuildDir)/assets"/>
+  </resourceCopies>
+
+  <buildscriptGradleAdditions>  
+  <insert>
+
+  </insert>
+  </buildscriptGradleAdditions>
+
+  <baseBuildGradleAdditions>
+  <insert>
+  <![CDATA[
+    ext {
+        androidSupportDependencies = [
+		v4 : "androidx.legacy:legacy-support-v4:1.0.0",
+		appCompat : "androidx.appcompat:appcompat:1.0.0",
+		design : "com.google.android.material:material:1.0.0-rc01",
+		customtabs : "androidx.customview:customview:1.1.0",
+		cardview : "androidx.cardview:cardview:1.0.0"
+]
+	presentationDependencies = [
+		recyclerView:"androidx.recyclerview:recyclerview:1.0.0"
+]
+	thirdChannel = [
+            facebookVersion: '6.4.0',
+            googleAuthVersion : '16.0.1',
+            googleGamesVersion : '16.0.0'
+    ]
+	channelDespendencies = [
+            facebookLogin         : "com.facebook.android:facebook-login:${thirdChannel.facebookVersion}",
+            facebookShare         : "com.facebook.android:facebook-share:${thirdChannel.facebookVersion}",
+            facebookCore          : "com.facebook.android:facebook-core:${thirdChannel.facebookVersion}",
+            facebookGamingServices: "com.facebook.android:facebook-gamingservices:${thirdChannel.facebookVersion}",
+            googleAuth: "com.google.android.gms:play-services-auth:${thirdChannel.googleAuthVersion}",
+            googleGames: "com.google.android.gms:play-services-games:${thirdChannel.googleGamesVersion}"
+    ]
+    }
+    ]]>
+  </insert>
+  </baseBuildGradleAdditions>
+
+  <buildGradleAdditions>
+    <insert>
+    <![CDATA[
+        configurations.all {
+            resolutionStrategy {
+            force rootProject.ext.channelDespendencies.googleAuth
+            force rootProject.ext.channelDespendencies.googleGames
+            force 'com.google.android.gms:play-services-nearby:16.0.0'
+            force 'com.google.android.gms:play-services-plus:16.0.0'
+          }
+        }
+      ]]>
+
+    </insert>
+  </buildGradleAdditions>
+
+  <androidManifestUpdates>
+    <log text="MSDK-UPL AndroidManifestUpdates finish" /> 
+  </androidManifestUpdates>
+
+  <!--在libUE4.so库加载之前需要加载的库,MSDK.so库用于接受java端的回调-->
+  <soLoadLibrary>
+  <log text="MSDK-UPL MSDK.so loaded after libUE4.so" /> 
+  </soLoadLibrary>
+
+
+<proguardAdditions>
+    <insert>
+      -keep class com.tdatamaster.** {*;}
+      -dontwarn okhttp3.*
+      -keep class com.tencent.tdmbeacon.** { *; }
+      -keep class com.tencent.tdm.** {*;}
+      -keep class com.tencent.gcloud.** {*;}
+      -keep class com.itop.gcloud.** {*;}
+      -keep public class com.tencent.bugly.**{*;}
+      -ignorewarnings
+      -keep class com.qq.taf.jce.* {*;}
+      -keep class com.tencent.mid.* {*;}
+      -keep class com.tencent.android.tpush.** {*;}
+      -keep class com.tencent.stat.**  {* ;}
+      -keep class com.tencent.mid.**  {* ;}
+      -keep class com.tencent.mm.opensdk.** {*;}
+      -keep class com.tencent.wxop.** {*;}
+      -keep class com.tencent.mm.sdk.** {*;}
+    </insert>
+  </proguardAdditions>
+
+</root>

@@ -1,0 +1,27 @@
+{
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "1.0",
+  "FriendlyName": "UnionAdapter",
+  "Description": "UnionAdapter",
+  "Category": "Other",
+  "CreatedBy": "GUA",
+  "CreatedByURL": "https://docs.msdk.qq.com/v5/",
+  "DocsURL": "https://docs.msdk.qq.com/v5/",
+  "MarketplaceURL": "https://docs.msdk.qq.com/v5/",
+  "SupportURL": "https://docs.msdk.qq.com/v5/",
+  "CanContainContent": true,
+  "IsBetaVersion": false,
+  "Installed": false,
+  "Modules": [
+    {
+      "Name": "UnionAdapter",
+      "Type": "Runtime",
+      "LoadingPhase": "Default",
+      "BlacklistPlatforms":
+          [
+              "Linux"
+          ]
+    }
+  ]
+}

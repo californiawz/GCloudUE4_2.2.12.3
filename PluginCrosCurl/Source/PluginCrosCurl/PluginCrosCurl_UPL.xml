@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--LogicCore additions-->
+<root xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+  <!-- 初始化-->
+  <init>
+    <log text="PluginCrosCurl-UPL init"/>
+  </init>
+  <!--在ndk-build编译之前，从Intermediate/Android/APK中拷贝或删除文件-->
+  <prebuildCopies>
+    <log text="PluginCrosCurl-UPL SDK Copy Dirs Begin. PluginDir is $S(PluginDir), BuildDir is $S(BuildDir)"/>
+    <copyDir src="$S(PluginDir)/lib/Android/PluginCrosCurl" dst="$S(BuildDir)/JavaLibs/PluginCrosCurl"/>
+  </prebuildCopies>
+
+  <buildscriptGradleAdditions>  
+  <insert>
+
+  </insert>
+  </buildscriptGradleAdditions>
+
+  <baseBuildGradleAdditions>
+      <insert>
+          <![CDATA[
+          
+          ]]>
+      </insert>
+  </baseBuildGradleAdditions>
+
+  <buildGradleAdditions>
+    <insert>
+
+    </insert>
+  </buildGradleAdditions>
+
+  <androidManifestUpdates>
+    <log text="PluginCrosCurl-UPL AndroidManifestUpdates finish" />
+  </androidManifestUpdates>
+
+  <!--在libUE4.so库加载之前需要加载的库,MSDK.so库用于接受java端的回调-->
+  <soLoadLibrary>
+  <log text="PluginCrosCurl-UPL PluginCrosCurl.so loaded after libUE4.so" />
+  </soLoadLibrary>
+
+
+  <proguardAdditions>
+    <insert>
+    </insert>
+  </proguardAdditions>
+
+</root>

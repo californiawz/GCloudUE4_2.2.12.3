@@ -1,0 +1,31 @@
+-optimizationpasses 5
+-dontusemixedcaseclassnames
+-dontskipnonpubliclibraryclasses
+-dontpreverify
+-dontoptimize
+-ignorewarnings
+-verbose
+-optimizations !code/simplification/arithmetic,!field/*,!class/merging/*
+
+#------------------  GCloudCore混淆排除        ----------------
+-keep class com.tencent.abase.**{*;}
+-keep class com.tencent.gcloud.**{*;}
+-keep class com.gcore.abase.**{*;}
+-keep class com.gcore.gcloud.**{*;}
+
+#------------------  下方是共性的排除项目         ----------------
+# 方法名中含有“JNI”字符的，认定是Java Native Interface方法，自动排除
+# 方法名中含有“JRI”字符的，认定是Java Reflection Interface方法，自动排除
+            
+-keepclasseswithmembers class * {
+... *JNI*(...);
+}
+            
+-keepclasseswithmembernames class * {
+... *JRI*(...);
+}
+            
+-keep class **JNI* {*;}
+-keep class android.app.** {
+*;
+}

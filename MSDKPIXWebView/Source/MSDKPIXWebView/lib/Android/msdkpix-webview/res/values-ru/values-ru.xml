@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="msdk_webview_cancel">Отмена</string>
+    <string name="share_cancel">Отправка отменена</string>
+    <string name="share_failure">Ошибка отправки</string>
+    <string name="share_success">Отправлено</string>
+</resources>

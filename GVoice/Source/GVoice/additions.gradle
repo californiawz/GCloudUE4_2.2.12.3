@@ -1,0 +1,18 @@
+android{
+    sourceSets{
+        main {
+            jniLibs.srcDirs 'libs'
+            res.srcDirs 'res'
+            assets.srcDirs 'assets'
+        }
+    }
+    if(gradle.gradleVersion.startsWith("5")){ packageBuildConfig false } else { buildFeatures { buildConfig = false } }//edit by script
+    packagingOptions {
+        exclude '**/BuildConfig.class'
+    }
+}
+
+dependencies {
+	compile fileTree(dir: 'libs', exclude: ['android-support-v4.jar'], include: ['*.jar'])
+	compile rootProject.ext.commonDependencies["support-v4"]
+}

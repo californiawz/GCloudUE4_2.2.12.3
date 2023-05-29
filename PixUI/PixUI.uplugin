@@ -1,0 +1,40 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "PixUI",
+	"Description": "pixui",
+	"Category": "Other",
+	"CreatedBy": "tianzelei",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"Installed": false,
+	"EnabledByDefault":true,
+    "Modules": [
+      {
+        "Name": "PixUI",
+        "Type": "Runtime",
+        "LoadingPhase": "Default",
+        "WhitelistPlatforms" : [ "IOS", "Mac", "Android", "Win64" ]
+      },
+      {
+        "Name": "PixUIEditor",
+        "Type": "Editor",
+        "LoadingPhase": "Default"
+      }
+    ],
+    "Plugins": [
+       {
+         "Name": "Paper2D",
+         "Enabled": true
+       },
+       {
+         "Name": "PluginCrosCurl",
+         "Enabled": true
+       }
+     ]
+}

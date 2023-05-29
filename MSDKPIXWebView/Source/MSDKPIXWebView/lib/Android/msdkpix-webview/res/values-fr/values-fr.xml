@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="msdk_webview_cancel">Annuler</string>
+    <string name="share_cancel">Annulé</string>
+    <string name="share_failure">Échec du partage</string>
+    <string name="share_success">Partagé</string>
+</resources>
