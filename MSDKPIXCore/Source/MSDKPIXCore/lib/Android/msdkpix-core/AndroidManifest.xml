@@ -2,8 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.itop.gcloud.msdk.pixui.core"
     android:versionCode="2614"
-    android:versionName="5.30.101.2614" >
+    android:versionName="5.30.101.2614" 
+	android:usesCleartextTraffic="true"
+	>
 
+	
     <uses-sdk
         android:minSdkVersion="15"
         android:targetSdkVersion="31" />
